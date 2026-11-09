@@ -719,6 +719,9 @@ extension GuestAPI {
         }
         foldLock.lock()
         defer { foldLock.unlock() }
+        // Readback and Off remain side-effect free for the gallery. Report a
+        // preparation failure before changing the current fold or pose.
+        if mode != "off" { try prepareStandByGallery() }
         GuestFoldPose.cancelStartupRestore()
         defer { GuestFoldPose.finishExplicitRequest() }
 

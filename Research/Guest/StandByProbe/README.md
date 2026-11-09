@@ -88,7 +88,10 @@ needed or tested. Use `off` before returning to normal fold experimentation.
 - Color palette and Light/Dark controls work. The Widgets editing tab is
   present, but a SundialPro widget was not installed or validated in this test.
 - **Add a New Face** opened but remained on a loading spinner for approximately
-  one minute. The full gallery and every possible face are not verified.
+  one minute during the original pose test. The later
+  [gallery repair](../standby_gallery_hang.md) restored gallery loading and
+  verified adding a colored Digital face on this guest. Every possible face
+  remains untested.
 - Book and tent showed different saved appearance selections. Do not assume
   customizing one presentation updates the other.
 - Both captures were 2034×1398. The book layout appeared, but inner-panel pixel
@@ -112,6 +115,16 @@ transition coverage before shipping that change.
 
 The stalled face gallery may have a separate cause; this experiment does not
 attribute it to the engine or claim a fix. No remote fork or PR was created.
+The later [gallery investigation](../standby_gallery_hang.md) traced the
+spinner to an unavailable local FaceSuggestions service and reproduced the
+duetexpertd data-vault startup crash when that service was restored.
+The subsequent repair created its missing asset directory, added the daemon
+to this guest's service-profile allow list, and restarted the guest. It did
+not require a binary patch or host security change.
+The updated agent now shares that preparation between startup and Tent/Book
+entry, and service-profile list 5 retains the daemon on iOS 27. Off and pose
+readback do not prepare the gallery. See the repair note for the profile-owned
+migration rule and validation limits.
 The original local research branch was `codex/duo-standby-research`. Work now
 lives in the user's [t9mike/vphone-cli fork](https://github.com/t9mike/vphone-cli),
 checked out at `/Users/mmuegel/links/Git/Free/vphone-cli` on

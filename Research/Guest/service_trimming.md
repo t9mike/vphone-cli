@@ -102,6 +102,17 @@ per 10 seconds, the VM 17% or less, and generativeexperiencesd stayed quiet
 ([#791](https://github.com/Lakr233/vphone-cli/issues/791)). It is now in
 `neverDisable`, on 26 as well as 27.
 
+**duetexpertd stays on iOS 27 (list version 5, 2026-11-09).** PosterBoard's
+StandBy face gallery uses its `com.apple.proactive.FaceSuggestions.xpc`
+service. Disabling it leaves **Add a New Face** spinning. Re-enabling it alone
+previously hit `ATXEnableMobileAssetDataVault`'s startup assertion. vphoned now
+prepares the missing DuetExpertCenterAsset directory at startup and before
+Tent/Book requests. It restores only this service when an older profile owns
+its disabled override; other overrides and user exceptions are preserved.
+An explicit profile apply also prepares the store before releasing the old
+override. The iOS 26 service selection is unchanged. See the
+[repair evidence and limitations](standby_gallery_hang.md).
+
 Some of these are only optional: Shortcuts, dictation, HomeKit, Maps,
 Mail, Reminders, iMessage and Safari bookmark sync. A research target that
 uses one of those frameworks needs its daemon back. Pass that label in `allow`

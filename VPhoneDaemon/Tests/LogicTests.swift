@@ -27,6 +27,7 @@ func expectEqual<T: Equatable>(_ actual: T, _ expected: T, _ message: String = "
 @main
 enum LogicTests {
     static func main() {
+        standByAssets()
         profileCatalog()
         profileCatalog26()
         profileSelection()
@@ -183,10 +184,69 @@ enum LogicTests {
 
     static let labelPattern = "^[A-Za-z0-9][A-Za-z0-9._:\\[\\]-]{0,200}$"
 
+    static func standByAssets() {
+        expect(GuestStandByAssets.applies(iosMajor: 27, hasDaemon: true), "27 prepares the gallery store")
+        expect(!GuestStandByAssets.applies(iosMajor: 26, hasDaemon: true), "26 is unchanged")
+        expect(!GuestStandByAssets.applies(iosMajor: 28, hasDaemon: true), "future releases are not assumed")
+        expect(!GuestStandByAssets.applies(iosMajor: 27, hasDaemon: false), "no orphan store without its daemon")
+        let fm = FileManager.default
+        let root = fm.temporaryDirectory.appendingPathComponent("StandByAssets-\(UUID().uuidString)")
+        defer { try? fm.removeItem(at: root) }
+        do {
+            try fm.createDirectory(at: root, withIntermediateDirectories: true)
+            expect(try GuestStandByAssets.prepare(varDirectory: root.path), "creates the missing store")
+            let store = GuestStandByAssets.components.reduce(root) { $0.appendingPathComponent($1) }
+            let sentinel = store.appendingPathComponent("existing-asset")
+            try Data("keep me".utf8).write(to: sentinel)
+            try fm.setAttributes([.posixPermissions: 0o700], ofItemAtPath: store.path)
+            expect(!(try GuestStandByAssets.prepare(varDirectory: root.path)), "second preparation is a no-op")
+            expectEqual(try Data(contentsOf: sentinel), Data("keep me".utf8), "retains assets")
+            expectEqual(try fm.attributesOfItem(atPath: store.path)[.posixPermissions] as? Int, 0o700, "retains existing permissions")
+            // A link at any component must fail without following it.
+            for depth in GuestStandByAssets.components.indices {
+                let testRoot = root.appendingPathComponent("link-\(depth)")
+                try fm.createDirectory(at: testRoot, withIntermediateDirectories: true)
+                let parent = GuestStandByAssets.components.prefix(depth).reduce(testRoot) { $0.appendingPathComponent($1) }
+                try fm.createDirectory(at: parent, withIntermediateDirectories: true)
+                try fm.createSymbolicLink(at: parent.appendingPathComponent(GuestStandByAssets.components[depth]), withDestinationURL: store)
+                do {
+                    try GuestStandByAssets.prepare(varDirectory: testRoot.path)
+                    expect(false, "must reject symlink at depth \(depth)")
+                } catch { expect(true, "refused link") }
+            }
+            let fileRoot = root.appendingPathComponent("file")
+            try fm.createDirectory(at: fileRoot, withIntermediateDirectories: true)
+            try Data().write(to: fileRoot.appendingPathComponent("MobileAsset"))
+            do {
+                try GuestStandByAssets.prepare(varDirectory: fileRoot.path)
+                expect(false, "must not replace a regular file")
+            } catch { expect(true, "refused file") }
+        } catch { expect(false, "StandBy filesystem test failed: \(error)") }
+
+        let old = GuestServiceProfile.Record(profile: "trimmed", listVersion: 4, iosMajor: 27,
+            groups: ["base", "accounts"], allow: ["com.apple.weatherd"],
+            labels: [GuestStandByAssets.service, "com.apple.akd"], updated: .distantPast)
+        let migrated = GuestServiceProfile.restoringFaceSuggestions(old, iosMajor: 27, now: .distantFuture)
+        expectEqual(migrated?.labels, ["com.apple.akd"], "migration releases only duetexpertd")
+        expectEqual(migrated?.groups, old.groups, "preserves groups")
+        expectEqual(migrated?.allow, old.allow, "preserves user exceptions")
+        expectEqual(migrated?.listVersion, 4, "does not claim a full profile reconciliation")
+        if let migrated {
+            expect(GuestServiceProfile.restoringFaceSuggestions(migrated, iosMajor: 27, now: Date()) == nil,
+                   "unowned and user-disabled services are left alone; migration is idempotent")
+        }
+        expect(GuestServiceProfile.restoringFaceSuggestions(old, iosMajor: 26, now: Date()) == nil, "no migration on 26")
+        let current = try? GuestServiceProfile.select(profile: "trimmed", iosMajor: 27)
+        expect(current?.labels.contains(GuestStandByAssets.service) == false, "future 27 profiles retain FaceSuggestions")
+        let change = GuestServiceProfile.reconcile(target: current?.labels ?? [], owned: old.labels,
+            overrides: [GuestStandByAssets.service: true, "com.apple.akd": true])
+        expect(change.enable.contains(GuestStandByAssets.service), "explicit profile apply also releases old duet override")
+    }
+
     static func profileCatalog() {
         let groups = GuestServiceProfile.groups27
-        expectEqual(GuestServiceProfile.base27.count, 133, "appendix A less siriactionsd, passd, financed and generativeexperiencesd")
-        expectEqual(Set(GuestServiceProfile.base27).count, 133, "appendix A has no duplicates")
+        expectEqual(GuestServiceProfile.base27.count, 132, "appendix A less the restored feature services")
+        expectEqual(Set(GuestServiceProfile.base27).count, 132, "appendix A has no duplicates")
         let all = groups.flatMap(\.labels)
         expectEqual(Set(all).count, all.count, "no label is in two groups")
         for label in all + GuestServiceProfile.neverDisable {
@@ -206,7 +266,7 @@ enum LogicTests {
         let base26 = GuestServiceProfile.base26
         expectEqual(base26.count, 127, "133 minus six 26.6.2 does not load")
         expectEqual(Set(base26).count, base26.count, "no duplicates")
-        expect(Set(base26).isSubset(of: GuestServiceProfile.base27), "26 adds no label of its own")
+        expectEqual(Set(base26).subtracting(GuestServiceProfile.base27), ["com.apple.duetexpertd"], "26 retains its original duetexpertd policy")
         expect(GuestServiceProfile.notLoadedOn26.isSubset(of: GuestServiceProfile.base27), "only 27 labels are left out")
         expect(Set(base26).isDisjoint(with: GuestServiceProfile.notLoadedOn26), "what 26 does not load is left out")
         for label in ["com.apple.cloudtelemetryd", "com.apple.hybridsearchd", "com.apple.safetyalertsd"] {
@@ -226,7 +286,7 @@ enum LogicTests {
 
     static func profileSelection() {
         let trimmed = try? GuestServiceProfile.select(profile: "trimmed", iosMajor: 27)
-        expectEqual(trimmed?.labels.count, 137, "default trimmed = 133 + 2 store + 2 follow-up")
+        expectEqual(trimmed?.labels.count, 136, "default trimmed = 132 + 2 store + 2 follow-up")
         expectEqual(trimmed?.groups, ["base", "app_store", "signin_followup"])
         expect(trimmed?.labels.contains("com.apple.followupd") == true, "followupd is in trimmed")
         expect(trimmed?.labels.contains("com.apple.akd") == false, "akd is not in trimmed by default")
@@ -245,13 +305,13 @@ enum LogicTests {
         expectEqual(trimmed?.labels, trimmed?.labels.sorted(), "labels sorted")
 
         let accounts = try? GuestServiceProfile.select(profile: "trimmed", iosMajor: 27, extraGroups: ["accounts"])
-        expectEqual(accounts?.labels.count, 140, "accounts adds three")
+        expectEqual(accounts?.labels.count, 139, "accounts adds three")
         expect(accounts?.labels.contains("com.apple.amsaccountsd") == true, "amsaccountsd with accounts")
 
         let allowed = try? GuestServiceProfile.select(
             profile: "trimmed", iosMajor: 27, allow: ["com.apple.weatherd", "com.example.not-listed"],
         )
-        expectEqual(allowed?.labels.count, 136, "allow removes one")
+        expectEqual(allowed?.labels.count, 135, "allow removes one")
         expectEqual(allowed?.allowed, ["com.apple.weatherd"], "only catalog labels are reported as allowed")
         expect(allowed?.labels.contains("com.apple.weatherd") == false, "weatherd kept")
 
@@ -356,7 +416,7 @@ enum LogicTests {
         var overrides = Dictionary(uniqueKeysWithValues: ota.map { ($0, true) })
         overrides["com.apple.user-choice"] = true
         let apply = GuestServiceProfile.reconcile(target: trimmed.labels, owned: [], overrides: overrides)
-        expectEqual(apply.disable.count, 134, "137 minus the three already disabled")
+        expectEqual(apply.disable.count, 133, "136 minus the three already disabled")
         expectEqual(apply.skipped.map(\.label), ota.sorted())
         let owned = GuestServiceProfile.owned(after: apply, failedDisable: [], failedEnable: [])
         for label in apply.disable {

@@ -16,6 +16,42 @@ extension GuestAPI {
         ProcessInfo.processInfo.operatingSystemVersion.majorVersion
     }
 
+    /// One service migration, not a reapplication of the whole profile. In
+    /// particular, leave an independently disabled daemon and other overrides
+    /// alone. Keep the old record version: other lists were not reconciled.
+    static func prepareStandByGalleryOnStartup() {
+        do {
+            try prepareStandByGallery()
+        } catch {
+            // Preserve profile ownership on failure so a later boot or an
+            // explicit Tent/Book request can retry.
+            NSLog("vphoned: StandBy gallery preparation failed: %@", String(describing: error))
+        }
+    }
+
+    static func prepareStandByGallery() throws {
+        guard GuestStandByAssets.applies(
+            iosMajor: guestIOSMajor,
+            hasDaemon: FileManager.default.fileExists(atPath: GuestStandByAssets.daemonPlist)
+        ) else { return }
+        serviceProfileLock.lock()
+        defer { serviceProfileLock.unlock() }
+        if try GuestStandByAssets.prepare() {
+            NSLog("vphoned: prepared the StandBy face-gallery asset directory")
+        }
+        guard let previous = GuestServiceProfile.readRecord(),
+              let record = GuestServiceProfile.restoringFaceSuggestions(previous, iosMajor: guestIOSMajor, now: Date())
+        else { return }
+        _ = try setServiceEnabled(GuestStandByAssets.service, enabled: true)
+        let state = try serviceStatus(GuestStandByAssets.service)
+        if state["loaded"] as? Bool != true {
+            _ = try loadServices([GuestStandByAssets.daemonPlist], load: true, override: false)
+        }
+        _ = try startService(GuestStandByAssets.service)
+        try GuestServiceProfile.writeRecord(record)
+        NSLog("vphoned: restored the face-suggestions service disabled by the old profile")
+    }
+
     /// Read-only: the recorded profile, the lists for this iOS version, and
     /// how the recorded labels stand now.
     static func serviceProfileState() throws -> [String: Any] {
@@ -67,6 +103,14 @@ extension GuestAPI {
             )
         } catch let failure as GuestServiceProfile.Failure {
             throw GuestAPIError.invalidRequest(failure.description)
+        }
+        // A caller can apply a profile before startup repair succeeds. Do not
+        // re-enable its old duetexpertd override until the store is ready.
+        if GuestStandByAssets.applies(
+            iosMajor: major,
+            hasDaemon: FileManager.default.fileExists(atPath: GuestStandByAssets.daemonPlist)
+        ) {
+            try GuestStandByAssets.prepare()
         }
         let previous = GuestServiceProfile.readRecord()
         let overrides = try disabledServiceOverrides()["disabled"] as? [String: Bool] ?? [:]

@@ -14,6 +14,7 @@ trap '/bin/rm -rf "$temporary"' EXIT
 /usr/bin/xcrun --sdk macosx swiftc -swift-version 6 -parse-as-library \
     -module-cache-path "$temporary/module-cache" \
     "$daemon/Daemon/GuestServiceProfile.swift" \
+    "$daemon/Daemon/GuestStandByAssets.swift" \
     "$daemon/Daemon/GuestFirstBootSettle.swift" \
     "$daemon/Daemon/GuestDeviceNameRule.swift" \
     "$daemon/Daemon/GuestPointerScroll.swift" \

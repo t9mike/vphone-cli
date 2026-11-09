@@ -23,7 +23,10 @@ guard vp_native_watch_proxy() == 0 else { exit(1) }
 // display, input, sensor or lock-screen startup applies there.
 let iPhoneStartup = !GuestRuntimePlatform.isVisionOS
 if iPhoneStartup {
-    // First, so the Lock Screen timeout is in place before SpringBoard reads it.
+    // Data is encrypted on the host. Prepare the face-gallery store here,
+    // including when this boot belongs to a fresh restore or an older clone.
+    GuestAPI.prepareStandByGalleryOnStartup()
+    // Set the Lock Screen timeout before SpringBoard reads it.
     GuestLockScreenIdle.startOnStartup()
     // Before the server, so `/v1/health` reports a drop from its first answer.
     GuestMobileGestaltCache.dropIfStaleOnStartup()

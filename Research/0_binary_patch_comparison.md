@@ -1,5 +1,14 @@
 # Patch Comparison: Regular / Development / Jailbreak / Experimental
 
+> **StandBy gallery preparation (2026-11-09).** vphoned prepares the missing
+> DuetExpertCenterAsset directory on iOS 27 at startup and before Tent/Book
+> entry. Service-profile list 5 retains duetexpertd on 27; startup/entry
+> migrate only an override owned by an older profile. The iOS 26 selection
+> remains unchanged. This is guest Data-volume setup in the existing agent,
+> not a new binary/kernel patch or a change to host security. It does not
+> establish native data-vault protection. See the
+> [diagnosis, implementation and validation](Guest/standby_gallery_hang.md).
+
 > **Virtual USB DriverKit capability (2026-11-08).**
 > `devicetree-cfw-virtual_usb_driverkit` writes `/product/supports-driverkit`
 > as little-endian UInt32 1 with flags 0 after board presentation, for iPhone

@@ -21,7 +21,7 @@ import Foundation
 enum GuestServiceProfile {
     /// Raised whenever a label list changes, and kept in the record, so a
     /// guest shows which list its overrides came from.
-    static let listVersion = 4
+    static let listVersion = 5
     static let recordPath = "/var/db/vphoned/service-profile.plist"
     static let trimmed = "trimmed"
     static let none = "none"
@@ -83,8 +83,10 @@ enum GuestServiceProfile {
     /// 24A435): the LaunchDaemons that were loaded at boot and stayed unloaded
     /// after the override, with the four traps below already taken out: 137,
     /// less siriactionsd since list version 2, passd and financed since list
-    /// version 3 and generativeexperiencesd since list version 4 (see
-    /// `neverDisable`).
+    /// version 3, generativeexperiencesd since list version 4 (see
+    /// `neverDisable`), and duetexpertd on iOS 27 since list version 5.
+    /// duetexpertd serves the StandBy face gallery; startup prepares its
+    /// missing MobileAsset directory before restoring a profile-owned override.
     static let base27: [String] = [
         "com.apple.CallHistorySyncHelper",
         "com.apple.Maps.mapspushd",
@@ -126,7 +128,6 @@ enum GuestServiceProfile {
         "com.apple.corespeechd",
         "com.apple.diagnosticextensionsd",
         "com.apple.diagnosticspushd",
-        "com.apple.duetexpertd",
         "com.apple.ecosystemanalyticsd",
         "com.apple.email.maild",
         "com.apple.eyereliefd",
@@ -230,7 +231,10 @@ enum GuestServiceProfile {
     /// same name. Of the four jobs only 26 has, the one that runs,
     /// `com.apple.timesync.audioclocksyncd`, stays on: off, it saved no host
     /// CPU. The never-disabled set needed nothing new for 26.
-    static let base26: [String] = base27.filter { !notLoadedOn26.contains($0) }
+    // Preserve the measured 26 list. The gallery repair is verified on 27;
+    // changing the 26 profile is a separate compatibility decision.
+    static let base26: [String] = (base27 + ["com.apple.duetexpertd"])
+        .filter { !notLoadedOn26.contains($0) }.sorted()
 
     /// `base27` labels 26.6.2 does not load: five its launchd.plist does not
     /// have, and safetyalertsd, which it limits to hardware a guest is not.
@@ -377,6 +381,17 @@ enum GuestServiceProfile {
     static let disabledElsewhere = "already disabled, not by the profile"
     static let neverDisabledReason = "never disabled"
     static let enabledElsewhere = "already enabled again"
+
+    /// Startup migrates only the old profile's ownership of FaceSuggestions;
+    /// a user-disabled service outside that record remains a user choice.
+    static func restoringFaceSuggestions(_ record: Record, iosMajor: Int, now: Date) -> Record? {
+        guard iosMajor == 27, record.iosMajor == 27, record.profile == trimmed,
+              record.labels.contains("com.apple.duetexpertd") else { return nil }
+        var result = record
+        result.labels.removeAll { $0 == "com.apple.duetexpertd" }
+        result.updated = now
+        return result
+    }
 
     static func reconcile(target: [String], owned: [String], overrides: [String: Bool]) -> Change {
         var change = Change()
