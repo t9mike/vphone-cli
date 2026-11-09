@@ -192,8 +192,13 @@ class VPhoneVirtualMachineWindowController: NSObject, NSWindowDelegate {
         // after; either way the window follows it.
         if !homePodGuest {
             control.observeInterfaceOrientation { [weak self, weak window] orientation in
-                guard let self, let window else { return }
-                applyOrientation(orientation ?? .portrait, to: window)
+                // A lost agent probe clears the reported orientation, but
+                // does not turn the guest. Keep the last rendered rotation
+                // until a fresh reading arrives instead of bouncing through
+                // portrait on every transient disconnect. Initial window
+                // setup already establishes portrait before the first read.
+                guard let self, let window, let orientation else { return }
+                applyOrientation(orientation, to: window)
             }
             // A foldable guest also folds by itself (Xcode DeviceHub), and its
             // panel shows sideways in the window until the poll catches up.

@@ -70,7 +70,12 @@ while (( $# )); do
         }
         found=0
         # Read committed blobs, preserving exact pinned bytes and nested paths.
-        while IFS= read -r -d '' entry; do
+        # Apple's zsh read -d touches the controlling terminal even with file
+        # input; in an Xcode background build phase this raises SIGTTOU.
+        # Split NUL records directly, preserving whitespace in filenames and
+        # propagating command failure through the assignment under errexit.
+        entries=("${(@0)$(/usr/bin/git -C "$checkout" ls-tree -r -z "$revision")}")
+        for entry in "${entries[@]}"; do
             metadata=${entry%%$'\t'*}
             relative=${entry#*$'\t'}
             [[ $metadata == 100???\ blob\ * ]] || continue
@@ -78,19 +83,20 @@ while (( $# )); do
             /usr/bin/git -C "$checkout" show "$revision:$relative" |
                 record_notice "$identity" "$revision" checkout "$relative"
             found=1
-        done < <(/usr/bin/git -C "$checkout" ls-tree -r -z "$revision")
+        done
         # Only notice files from this package's downloaded binary targets.
         # SDKs, build products and firmware directories are never traversed.
         artifact=$(package_directory "$packages/artifacts" "$identity") || artifact=''
         if [[ -d $artifact ]]; then
             artifact_found=0
-            while IFS= read -r -d '' file; do
+            files=("${(@0)$(/usr/bin/find "$artifact" -type f -print0)}")
+            for file in "${files[@]}"; do
                 relative=${file#$artifact/}
                 is_notice "$relative" || continue
                 record_notice "$identity" "$revision" "artifacts-${packages:h:t}" "$relative" < "$file"
                 found=1
                 artifact_found=1
-            done < <(/usr/bin/find "$artifact" -type f -print0)
+            done
             if (( ! artifact_found )); then
                 printf '%s\t%s\tartifact_missing\t-\t-\n' "$identity" "$revision" >> "$manifest"
             fi

@@ -1,6 +1,258 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Changing pose…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Changing pose…"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "姿勢を変更中…"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "자세 변경 중…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在切换姿态…"
+          }
+        }
+      }
+    },
+    "Current Pose" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Current Pose"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "現在の姿勢"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현재 자세"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前姿态"
+          }
+        }
+      }
+    },
+    "Normal fold controls restored. The device is closed." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Normal fold controls restored. The device is closed."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通常の折りたたみ操作に戻りました。デバイスは閉じています。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "일반 접기 제어가 복원되었습니다. 기기가 닫혔습니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已恢复正常折叠控制。设备已合上。"
+          }
+        }
+      }
+    },
+    "StandBy" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "StandBy"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スタンバイ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스탠바이"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "待机显示"
+          }
+        }
+      }
+    },
+    "StandBy pose applied. Finish any welcome screen in the guest." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "StandBy pose applied. Finish any welcome screen in the guest."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スタンバイの姿勢を適用しました。ゲストの初期案内が表示された場合は完了してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스탠바이 자세가 적용되었습니다. 게스트에 시작 안내가 표시되면 완료하세요."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已应用待机显示姿态。请在虚拟设备中完成欢迎界面。"
+          }
+        }
+      }
+    },
+    "Tent" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tent"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "テント"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "텐트"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "帐篷"
+          }
+        }
+      }
+    },
+    "Tent and Book lock the device and enter a StandBy pose. Off restores normal folding and closes the device." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tent and Book lock the device and enter a StandBy pose. Off restores normal folding and closes the device."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "テントとブックはデバイスをロックしてスタンバイの姿勢にします。オフは通常の折りたたみに戻してデバイスを閉じます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "텐트와 책 모드는 기기를 잠그고 스탠바이 자세로 전환합니다. 끄기는 일반 접기를 복원하고 기기를 닫습니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "帐篷和书本会锁定设备并进入待机显示姿态。关闭会恢复正常折叠并合上设备。"
+          }
+        }
+      }
+    },
+    "Unable to set StandBy. %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unable to set StandBy. %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スタンバイを設定できません。%@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스탠바이를 설정할 수 없습니다. %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法设置待机显示。%@"
+          }
+        }
+      }
+    },
+    "Update the guest component to use StandBy controls." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update the guest component to use StandBy controls."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スタンバイ操作を使うにはゲストコンポーネントを更新してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스탠바이 제어를 사용하려면 게스트 구성 요소를 업데이트하세요."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请更新虚拟设备组件以使用待机显示控制。"
+          }
+        }
+      }
+    },
     "Environment Immersion" : {
       "localizations" : {
         "en" : {

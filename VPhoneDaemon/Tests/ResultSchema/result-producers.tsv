@@ -64,6 +64,7 @@ display.orientation	VPhoneDaemon/Daemon/GuestAPI+Device.swift#interfaceOrientati
 display.pose	VPhoneDaemon/Native/vphoned_pose.m#vp_device_pose_get
 display.posture	VPhoneDaemon/Daemon/GuestAPI+Device.swift#setDevicePose
 display.rotation	VPhoneDaemon/Daemon/GuestAPI+Device.swift#executeDevice
+display.standby	VPhoneDaemon/Daemon/GuestAPI+Device.swift#standByPose;VPhoneDaemon/Daemon/GuestAPI+Device.swift#standByState
 display.rotation_lock	icli:IcliKit/Device/Device.swift#setRotationLock
 environment.install	VPhoneDaemon/Daemon/GuestAPI+Environment.swift#installEnvironment
 environment.status	VPhoneDaemon/Daemon/GuestAPI+Environment.swift#executeEnvironment

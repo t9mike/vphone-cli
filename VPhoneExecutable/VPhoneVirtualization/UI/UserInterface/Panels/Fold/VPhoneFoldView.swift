@@ -44,6 +44,32 @@ private struct VPhoneFoldEditor: View {
                     Text("Screen State", bundle: VPhoneLocalization.bundle)
                 }
                 Section {
+                    HStack {
+                        ForEach(VPhoneStandByMode.allCases, id: \.self) { mode in
+                            Button {
+                                Task { await model.setStandBy(mode) }
+                            } label: {
+                                Text(verbatim: mode.title)
+                                    .frame(maxWidth: .infinity)
+                            }
+                            .accessibilityIdentifier("fold-standby-\(mode.rawValue)")
+                        }
+                    }
+                    .disabled(!model.canFold || !model.supportsStandBy)
+                    foldRow("Current Pose", model.standByMode?.title)
+                    if model.supportsStandBy {
+                        Text("Tent and Book lock the device and enter a StandBy pose. Off restores normal folding and closes the device.", bundle: VPhoneLocalization.bundle)
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    } else {
+                        Text("Update the guest component to use StandBy controls.", bundle: VPhoneLocalization.bundle)
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                } header: {
+                    Text("StandBy", bundle: VPhoneLocalization.bundle)
+                }
+                Section {
                     Toggle(isOn: $model.animates) {
                         Text("Animate the fold (sweep)", bundle: VPhoneLocalization.bundle)
                     }
@@ -88,7 +114,7 @@ private struct VPhoneFoldEditor: View {
             VPhoneGuestToolStatusBar(
                 isConnected: model.isConnected,
                 activity: model.isSending
-                    ? String(localized: "Folding…", bundle: VPhoneLocalization.bundle)
+                    ? String(localized: "Changing pose…", bundle: VPhoneLocalization.bundle)
                     : nil,
                 status: model.status,
             )

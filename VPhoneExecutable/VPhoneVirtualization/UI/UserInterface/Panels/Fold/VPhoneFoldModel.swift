@@ -1,5 +1,17 @@
 import Foundation
 
+enum VPhoneStandByMode: String, CaseIterable {
+    case off, tent, book
+
+    var title: String {
+        switch self {
+        case .off: String(localized: "Off", bundle: VPhoneLocalization.bundle)
+        case .tent: String(localized: "Tent", bundle: VPhoneLocalization.bundle)
+        case .book: String(localized: "Book", bundle: VPhoneLocalization.bundle)
+        }
+    }
+}
+
 // MARK: - Positions
 
 /// Apple's three screen states, from suiatool's help text shipped in
@@ -70,9 +82,8 @@ struct VPhoneFoldReply {
 
 // MARK: - Model
 
-/// The three-state fold control: a posture write panel, in the shape of
-/// Apple's simulator fold chrome. The guest has no read side for the pose —
-/// the state shown is the latest reply.
+/// Screen-state and StandBy controls. Fold details show the latest reply;
+/// the StandBy mode is read back while the panel is open.
 @MainActor
 @Observable
 final class VPhoneFoldModel {
@@ -82,6 +93,10 @@ final class VPhoneFoldModel {
     private(set) var isSending = false
     private(set) var reply: VPhoneFoldReply?
     private(set) var status: VPhoneGuestToolStatus?
+    private(set) var standByMode: VPhoneStandByMode?
+    private var requestGeneration = 0
+
+    var supportsStandBy: Bool { control.guestCapabilities.contains("display_standby") }
 
     /// The screen state the control drives. A pure control, like the
     /// simulator's fold buttons: it starts at the pose a guest boots in.
@@ -107,19 +122,31 @@ final class VPhoneFoldModel {
         isConnected = observed
         while !Task.isCancelled {
             try? await Task.sleep(for: .seconds(1))
+            guard !Task.isCancelled else { return }
             let connected = control.isConnected
-            guard connected != observed else { continue }
-            observed = connected
-            isConnected = connected
+            if connected != observed {
+                observed = connected
+                isConnected = connected
+            }
+            if !connected || !supportsStandBy {
+                standByMode = nil
+            } else if supportsStandBy, !isSending {
+                let generation = requestGeneration
+                let observedMode = try? await control.readStandByMode()
+                // A user action may start while the read is awaiting its reply.
+                if !isSending, generation == requestGeneration { standByMode = observedMode }
+            }
         }
     }
 
     func set(_ target: VPhoneFoldPosition) async {
         guard isConnected, !isSending else { return }
         isSending = true
+        requestGeneration += 1
         do {
             let reply = try await control.setFoldPosition(target, duration: animates ? duration : 0)
             self.reply = reply
+            if supportsStandBy { standByMode = try? await control.readStandByMode() }
             isSending = false
             var message = String(
                 localized: "Folded to \(reply.position.title) — \(Int(reply.angle.rounded()))°.",
@@ -137,6 +164,28 @@ final class VPhoneFoldModel {
                     bundle: VPhoneLocalization.bundle
                 ),
                 isError: true,
+            )
+        }
+    }
+
+    func setStandBy(_ mode: VPhoneStandByMode) async {
+        guard canFold, supportsStandBy else { return }
+        isSending = true
+        requestGeneration += 1
+        defer { isSending = false }
+        do {
+            standByMode = try await control.setStandByMode(mode)
+            status = VPhoneGuestToolStatus(
+                message: mode == .off
+                    ? String(localized: "Normal fold controls restored. The device is closed.", bundle: VPhoneLocalization.bundle)
+                    : String(localized: "StandBy pose applied. Finish any welcome screen in the guest.", bundle: VPhoneLocalization.bundle),
+                isError: false
+            )
+        } catch {
+            standByMode = try? await control.readStandByMode()
+            status = VPhoneGuestToolStatus(
+                message: String(localized: "Unable to set StandBy. \(VPhoneControlsModel.guestMessage(error))", bundle: VPhoneLocalization.bundle),
+                isError: true
             )
         }
     }

@@ -49,7 +49,8 @@ bool vp_device_pose_set(int deviceOrientation, int hingeState, int tabletopPose)
         service = NSClassFromString(@"SBSTestAutomationService");
     });
     SEL selector = NSSelectorFromString(@"setDevicePoseOverride:");
-    if (!service || ![service instancesRespondToSelector:selector]) return false;
+    Method method = class_getInstanceMethod(service, selector);
+    if (!method || strcmp(method_getTypeEncoding(method), "v40@0:8{?=qiii}16") != 0) return false;
     id client = [service new];
     VPDevicePoseOverride pose = {deviceOrientation, deviceOrientation, hingeState, tabletopPose};
     ((void (*)(id, SEL, VPDevicePoseOverride))objc_msgSend)(client, selector, pose);

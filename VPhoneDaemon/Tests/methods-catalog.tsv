@@ -65,6 +65,7 @@ display.pose	never	-	-	available:boolean,device_orientation:any?,hinge:any?,orie
 display.posture	never	position:any,duration:number,profile:string,hinge:any,orientation:any,tabletop:integer,angle:number	-	angle:number,hinge:integer,hinge_hid:any,orientation:integer,source:string,sweep:object?,tabletop:any	mutating
 display.rotation	never	orientation:string	-	accelerometer:any?,degrees:integer,device_orientation:integer,locked:boolean,name:string,requested:any?	read
 display.rotation_lock	never	locked:boolean!	-	degrees:integer,device_orientation:integer,locked:boolean,name:string	mutating
+display.standby	never	mode:string	-	mode:string,pose:object	read
 environment.install	never	libraries:array!	-	installed:array,reboot_required:boolean,restarted_pids:array,root_read_only:boolean	mutating
 environment.status	never	-	-	libraries:any,root_read_only:boolean,staging:string	read
 files.chmod	never	path:string!,mode:string!	-	mode:string,path:string	mutating

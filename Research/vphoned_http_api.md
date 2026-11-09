@@ -1437,3 +1437,28 @@ the preview disconnects it. The output-only host window requests one JPEG at a
 time, targeting 60 Hz with actual throughput dependent on rendering, encoding,
 transfer and decoding. Resolution switching and reconnecting work at runtime;
 neither requires a VM reboot.
+
+### Duo StandBy tabletop override
+
+`display.standby {mode?: "off" | "tent" | "book"}` (capability
+`display_standby`) reads the current tabletop pose when `mode` is omitted.
+A write requires an iPhone Duo with CoreMotion hinge support. Tent and Book
+reset the previous override, transition the hinge, lock and wake the display,
+then apply SpringBoard's tabletop test override. Off restores normal sensor
+control and leaves the device closed. An ordinary `display.posture` request
+also clears an active StandBy override before folding.
+
+The result is `{mode, pose}`: `pose` is the actual `display.pose` snapshot;
+`mode` is `off`, `tent`, `book`, `other`, or `unavailable`, inferred from that
+snapshot. A successful write checks both acceptance and settled readback. It
+proves the pose, not that StandBy onboarding is dismissed or a face is visible.
+The test-automation snapshot can remain stale during ordinary CoreMotion
+folding. Hinge transitions therefore check the running HID provider's reported
+angle and orientation, then allow the display to settle; only explicit tabletop
+overrides use the test-automation snapshot as their acceptance check.
+On failed entry, the command attempts to restore the normal closed pose and
+reports a reset failure if recovery also fails. It does not change StandBy
+preferences or install a face. The Fold Posture panel exposes the same Off,
+Tent, and Book operations alongside its existing screen-state control.
+
+See [live guest evidence and limitations](Guest/StandByProbe/README.md).

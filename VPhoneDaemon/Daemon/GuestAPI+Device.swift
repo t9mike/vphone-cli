@@ -83,6 +83,7 @@ enum DeviceMethod: String, GuestMethod {
     case displayOrientation = "display.orientation"
     case displayPosture = "display.posture"
     case displayPose = "display.pose"
+    case displayStandby = "display.standby"
     case displayRotationLock = "display.rotation_lock"
     case displayAutoLock = "display.auto_lock"
     case displayAutoLockSet = "display.auto_lock.set"
@@ -263,6 +264,8 @@ enum DeviceMethod: String, GuestMethod {
                                                .optional("orientation", .any),
                                                .optional("reason", .string),
                                                .optional("tabletop", .any)])
+        case .displayStandby: MethodSpec(.optional("mode", .string), result: [.required("mode", .string),
+                                            .required("pose", .object)])
         case .displayRotationLock: MethodSpec(.required("locked", .boolean), result: [.required("degrees", .integer),
                                                        .required("device_orientation", .integer),
                                                        .required("locked", .boolean),
@@ -447,6 +450,8 @@ extension GuestAPI {
             return try setDevicePose(params)
         case .displayPose:
             return vp_device_pose_get()
+        case .displayStandby:
+            return try standByPose(params)
         case .displayRotationLock:
             guard let locked = params["locked"] as? Bool else {
                 throw GuestAPIError.invalidRequest("locked must be true or false")
@@ -628,6 +633,7 @@ extension GuestAPI {
         GuestFoldPose.cancelStartupRestore()
         var springBoardSwept = false
         defer { GuestFoldPose.finishExplicitRequest(settledHinge: springBoardSwept ? Int32(hinge) : nil) }
+        try resetStandByIfNeeded()
         let published: Bool
         if relayed {
             if let current = vp_hinge_get()["angle"] as? Double, hingeState(for: current) == 1, hingeState(for: angle!) != 1 {
@@ -695,6 +701,134 @@ extension GuestAPI {
     /// One posture request at a time: SpringBoard refuses a swap while another
     /// is running, and the next request reads the hinge this one leaves.
     private static let foldLock = NSLock()
+
+    // MARK: StandBy tabletop poses
+
+    /// A tabletop override is distinct from the virtual hinge's three positions.
+    /// CoreMotion's host controls do not publish tabletop classification. Keep
+    /// normal folds on that route, and explicitly override only for StandBy.
+    /// See Research/Guest/StandByProbe/README.md for the live 27.1 evidence.
+    private static func standByPose(_ params: [String: Any]) throws -> [String: Any] {
+        guard let mode = params["mode"] as? String else { return standByState() }
+        guard ["off", "tent", "book"].contains(mode) else {
+            throw GuestAPIError.invalidRequest("mode must be off, tent or book")
+        }
+        guard try collectDeviceSnapshot()["model"] as? String == "iPhone19,4",
+              vp_core_motion_hinge() else {
+            throw GuestAPIError.operationFailed("StandBy poses require an iPhone Duo with CoreMotion hinge support")
+        }
+        foldLock.lock()
+        defer { foldLock.unlock() }
+        GuestFoldPose.cancelStartupRestore()
+        defer { GuestFoldPose.finishExplicitRequest() }
+
+        // A real closed-to-open sensor transition is necessary between overrides.
+        // An all-zero override alone does not establish that sensors resumed.
+        try resetStandByPose()
+        if mode == "off" { return standByState() }
+        do {
+            try setStandByHinge(mode == "book" ? 180 : 100)
+            if lockState()["locked"] as? Bool != true {
+                _ = try pressButton("power")
+                Thread.sleep(forTimeInterval: 1.5)
+            }
+            guard lockState()["locked"] as? Bool == true, GuestScreenUnlock.wakeDisplay() else {
+                throw GuestAPIError.operationFailed("The guest did not reach a lit Lock Screen")
+            }
+            let tabletop: Int32 = mode == "tent" ? 7 : 3
+            guard vp_device_pose_set(1, 2, tabletop) else {
+                throw GuestAPIError.operationFailed("SpringBoard's tabletop override ABI is unavailable")
+            }
+            try waitForStandByPose(orientation: 1, hinge: 2, tabletop: tabletop)
+            // Verify the settled state, not only the first accepted sample.
+            Thread.sleep(forTimeInterval: 2)
+            let result = standByState()
+            guard result["mode"] as? String == mode else {
+                throw GuestAPIError.operationFailed("The StandBy pose did not persist")
+            }
+            return result
+        } catch {
+            // A failed entry should leave ordinary controls usable. Report a
+            // failed cleanup too rather than pretending rollback succeeded.
+            do { try resetStandByPose() }
+            catch let resetError {
+                throw GuestAPIError.operationFailed("StandBy failed: \(error.localizedDescription). Reset failed: \(resetError.localizedDescription)")
+            }
+            throw error
+        }
+    }
+
+    private static func standByState() -> [String: Any] {
+        let pose: [String: Any] = vp_device_pose_get()
+        let mode: String
+        if pose["available"] as? Bool != true {
+            mode = "unavailable"
+        } else if pose["hinge"] as? Int == 2, pose["device_orientation"] as? Int == 1,
+                  let tabletop = pose["tabletop"] as? Int, [3, 7].contains(tabletop) {
+            mode = tabletop == 7 ? "tent" : "book"
+        } else {
+            mode = pose["tabletop"] as? Int == 0 ? "off" : "other"
+        }
+        // This is pose readback, not a claim that onboarding is dismissed or
+        // that StandBy's face is visible on the screen.
+        return ["mode": mode, "pose": pose]
+    }
+
+    private static func resetStandByIfNeeded() throws {
+        // Rotation may have changed since entry. A tabletop override still
+        // needs clearing even when it no longer matches our portrait preset.
+        if let tabletop = vp_device_pose_get()["tabletop"] as? Int,
+           [3, 7].contains(tabletop) { try resetStandByPose() }
+    }
+
+    private static func resetStandByPose() throws {
+        guard vp_device_pose_set(0, 0, 0) else {
+            throw GuestAPIError.operationFailed("SpringBoard's tabletop override ABI is unavailable")
+        }
+        try waitForStandByPose(orientation: 0, hinge: 0, tabletop: 0)
+        try setStandByHinge(0)
+    }
+
+    private static func setStandByHinge(_ angle: Double) throws {
+        // SpringBoard publishes sensor poses on display frames. Wake before
+        // changing the hinge, including when leaving a tabletop override.
+        guard GuestScreenUnlock.wakeDisplay() else {
+            throw GuestAPIError.operationFailed("The display did not wake for the StandBy hinge transition")
+        }
+        guard vp_hinge_set(angle, 1) else {
+            throw GuestAPIError.operationFailed("The virtual hinge did not take the StandBy transition")
+        }
+        // getDevicePose reads the test-automation snapshot, not the current
+        // CoreMotion pose on a relay guest. Check the HID provider instead;
+        // only explicit tabletop overrides are verified with getDevicePose.
+        for _ in 0 ..< 30 {
+            let state = vp_hinge_get()
+            if state["provider_running"] as? Bool == true,
+               let provider = state["provider"] as? [String: Any],
+               let current = provider["current_angle"] as? Double,
+               let configuration = provider["configuration"] as? [String: Any],
+               configuration["orientation"] as? Int == 1, abs(current - angle) < 0.5 {
+                // Allow the display transition to settle before the next
+                // override. Provider acceptance alone is not a rendered pose.
+                Thread.sleep(forTimeInterval: 2)
+                return
+            }
+            Thread.sleep(forTimeInterval: 0.1)
+        }
+        throw GuestAPIError.operationFailed("The hinge provider did not report the requested StandBy angle")
+    }
+
+    private static func waitForStandByPose(orientation: Int32, hinge: Int32, tabletop: Int32) throws {
+        for _ in 0 ..< 30 {
+            let actual = vp_device_pose_get()
+            if actual["available"] as? Bool == true,
+               actual["device_orientation"] as? Int32 == orientation,
+               actual["hinge"] as? Int32 == hinge, actual["tabletop"] as? Int32 == tabletop { return }
+            Thread.sleep(forTimeInterval: 0.1)
+        }
+        let actual = vp_device_pose_get()
+        throw GuestAPIError.operationFailed("SpringBoard did not report pose \(orientation)/\(hinge)/\(tabletop); readback: \(actual)")
+    }
 
     /// Fold through SpringBoard's display tool service, waiting for it to
     /// finish. True once SpringBoard ran the fold, false without the service

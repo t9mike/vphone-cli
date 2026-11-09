@@ -1,0 +1,2451 @@
+[
+  {
+    "repo": "0xJacky/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "770c66aecfc691e38b430451d8238de2ffd081c8"
+      }
+    ]
+  },
+  {
+    "repo": "44510/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "f7faf866eec38b0cbd69e29fb4805c6c154efbc7"
+      }
+    ]
+  },
+  {
+    "repo": "7O9E4H0/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "8c3630c79c6b1f016fe189bf21933b8850590357"
+      }
+    ]
+  },
+  {
+    "repo": "9I0n1yf4n5/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "65b68dd42bf5a6835250ae8d9624d94cddb6842c"
+      }
+    ]
+  },
+  {
+    "repo": "AcideFluorhydrique/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "65b68dd42bf5a6835250ae8d9624d94cddb6842c"
+      }
+    ]
+  },
+  {
+    "repo": "adeviwon/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "fd1610d7928aacd6cbc060722bb27fd7d2c76315"
+      }
+    ]
+  },
+  {
+    "repo": "anandstrength01/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "755d49191a6f0b78fbcdde4f43d56ce45c9bee90"
+      }
+    ]
+  },
+  {
+    "repo": "Arbifoxx/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "0f591127871817ea405f10900463b85e05b0caf7"
+      },
+      {
+        "name": "shader-cache",
+        "sha": "8ae9f9f4172915e78db41f9ad197301b71b91c70"
+      },
+      {
+        "name": "shader-cache-experimental",
+        "sha": "1d5b7a9f7779f81f7ace10c1d8652c914d199e3e"
+      }
+    ]
+  },
+  {
+    "repo": "Ardent6971/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "0499378c7c46b1bfab5f1d9c3ffdb158e24bb083"
+      }
+    ]
+  },
+  {
+    "repo": "arthur-flynn/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "047642f8e89b42c6219be569cc5efc675320613b"
+      }
+    ]
+  },
+  {
+    "repo": "arthurrecuperoff-code/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "22f7dc3e39c9ae11770bcf629f4f1bf799ce0e61"
+      }
+    ]
+  },
+  {
+    "repo": "AS9929/vphone-cli",
+    "branches": [
+      {
+        "name": "codex/cibarcode-x1-compatibility",
+        "sha": "5e784733cf1ba3529dabb02d214946e0377ec805"
+      },
+      {
+        "name": "codex/homepop-accessibility-x1",
+        "sha": "27add65230a8e4f7cc6c5d703f0a75868e42689b"
+      },
+      {
+        "name": "codex/legacy-remap-evidence",
+        "sha": "c148c1da07713e163b8c09c76f99a3d4c34df7ac"
+      },
+      {
+        "name": "codex/merge-remaining-prs",
+        "sha": "2ef4f8d0e63ac9d1ea25b5343df4406e5549a586"
+      },
+      {
+        "name": "codex/preserve-x1-task-exceptions",
+        "sha": "194efaa0681af91cb3f74e0fbb3ccb5db0f8f190"
+      },
+      {
+        "name": "fix/macos26-host-guests",
+        "sha": "130304833e39dc42a20d770fad462bb6174251ad"
+      },
+      {
+        "name": "fix/review-732",
+        "sha": "2eac4eb5bbd1030faa1fd98099af6b37161c9294"
+      },
+      {
+        "name": "main",
+        "sha": "9b8471be3f041ac7de366203603d548f350d0e10"
+      }
+    ]
+  },
+  {
+    "repo": "AugustRush/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "583684766d948e50430d4f37f75db1c84e5b19be"
+      }
+    ]
+  },
+  {
+    "repo": "baihua666/vphone-cli",
+    "branches": [
+      {
+        "name": "codex/arm-session-flow",
+        "sha": "34a477ae99e1700839e802e8572f48055bd2fe9b"
+      },
+      {
+        "name": "codex/arm-store-r10",
+        "sha": "2c3d46fa743dcab629dc3fc582eef79359a212cd"
+      },
+      {
+        "name": "codex/launchpad-auto-update",
+        "sha": "d22e5a5aab27f0a67f58ee506938fbb5af7b2d86"
+      },
+      {
+        "name": "codex/launchpad-local-images",
+        "sha": "9fd3e46d47b44a6c319c4a881006c8b231c6935f"
+      },
+      {
+        "name": "codex/launchpad-r6",
+        "sha": "2f865bd6acd6de0b33367b0d6075e0aa8767ca92"
+      },
+      {
+        "name": "codex/launchpad-r8-upgrade-test",
+        "sha": "3a6f76901d689c670ead4f0c79a66192bf7fd658"
+      },
+      {
+        "name": "codex/launchpad-r9-release",
+        "sha": "2e89a40f3d2f0e9b0b1d7e287c4378e6680f5ffe"
+      },
+      {
+        "name": "codex/launchpad-r11-release",
+        "sha": "86e7c59b7e06bdced0c792b97323b8dc75a88187"
+      },
+      {
+        "name": "codex/launchpad-r12-release",
+        "sha": "9684127fc203bc7fe36245aafa60901b7bbde9e1"
+      },
+      {
+        "name": "codex/launchpad-r13",
+        "sha": "ab11cd57f00e558186dc4e3bc95841c5208cbb01"
+      },
+      {
+        "name": "codex/threads-r15",
+        "sha": "627ce0bd6eb86f68eb0dfaa9c94336aa96504b80"
+      },
+      {
+        "name": "main",
+        "sha": "9c23c8adcd4b362120988ab9d228b959bcc23ae3"
+      },
+      {
+        "name": "tb_dev",
+        "sha": "fb0c8e885c6ed5bda4b619cfb2c1b922be6a6e8e"
+      }
+    ]
+  },
+  {
+    "repo": "BdQnaccpTianYang/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "4f18540d9335c2868286cd03c0a1796811fb3d2f"
+      }
+    ]
+  },
+  {
+    "repo": "BearRan/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "39324ee7fcbb1d909bfa293f6188a8ef752ba734"
+      }
+    ]
+  },
+  {
+    "repo": "Beksshio/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "56915f1a8c41facd00f93a506cdbd2e34a5708d3"
+      }
+    ]
+  },
+  {
+    "repo": "bhengubv/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "770c66aecfc691e38b430451d8238de2ffd081c8"
+      }
+    ]
+  },
+  {
+    "repo": "Bionichunter/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "39324ee7fcbb1d909bfa293f6188a8ef752ba734"
+      }
+    ]
+  },
+  {
+    "repo": "blueryang/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "047642f8e89b42c6219be569cc5efc675320613b"
+      }
+    ]
+  },
+  {
+    "repo": "bobo553/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "7d633c9ab373880bf00f6964a29964269e8eb53b"
+      }
+    ]
+  },
+  {
+    "repo": "buyersystem/vphone-cli3",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "57bbc93c5a3498919f2cea0ed0be60d83e28055b"
+      }
+    ]
+  },
+  {
+    "repo": "bvolpato/vphone-cli",
+    "branches": [
+      {
+        "name": "bvolpato/active-cache-validation-20261108",
+        "sha": "d325524572c436b522a5c05ca1558b38eb00de37"
+      },
+      {
+        "name": "bvolpato/active-display-discovery",
+        "sha": "aeb3a82e4380263c8982522686920c562379f22a"
+      },
+      {
+        "name": "bvolpato/active-display-discovery-validation",
+        "sha": "65938b56a0c5b891141894da5b1f86535d89ea1d"
+      },
+      {
+        "name": "bvolpato/active-scene-layout-diagnostics",
+        "sha": "d39a669f9df1f60a03e36c9cbbb2432ca56919e3"
+      },
+      {
+        "name": "bvolpato/active-vsock-validation-20261108",
+        "sha": "823316680ebbd4498260ec0fc0f9f0a367ddee50"
+      },
+      {
+        "name": "bvolpato/bound-vsock-packets",
+        "sha": "8a4c6e2cb51ae7d01392d034ca6b632bb5e33529"
+      },
+      {
+        "name": "bvolpato/bounded-health-checks",
+        "sha": "abae712deb2005e12a3c9f27328577349cde8556"
+      },
+      {
+        "name": "bvolpato/cached-worker-persistence",
+        "sha": "ea5990ec3292f58310b79f81533d5fdca47a10c1"
+      },
+      {
+        "name": "bvolpato/cached-worker-validation",
+        "sha": "ef6817e3bdea0a355a8573d576c2ed1949cd9186"
+      },
+      {
+        "name": "bvolpato/capture-cover-without-hardware-uuid",
+        "sha": "cd3996ad8b44f486dd619bacb3a584e671c8ae1f"
+      },
+      {
+        "name": "bvolpato/corelocation-feature-schema",
+        "sha": "bd05dc9eea66ed9b88e140f8e35604606ccd8820"
+      },
+      {
+        "name": "bvolpato/corelocation-feature-schema-2.14",
+        "sha": "6bf359be17adab049054e15f7087e1b9a32323d2"
+      },
+      {
+        "name": "bvolpato/duo-global-display",
+        "sha": "ec2cbb1060b0504fbccc44d58d04521c1dfef221"
+      },
+      {
+        "name": "bvolpato/fix-process-capture-eof",
+        "sha": "4a50dbecaa4ab73e35e4e40499627521a9cb1b65"
+      },
+      {
+        "name": "bvolpato/native-bundle-candidate-20261108",
+        "sha": "fa4c3b0adbb38c8eca0b62f3a7ef553ed6eb3825"
+      },
+      {
+        "name": "bvolpato/native-cover-capture-candidate-20261108",
+        "sha": "5caaea8d873e3c47d52f23108d83f1cf2b803cdf"
+      },
+      {
+        "name": "bvolpato/package-redistribution-notices",
+        "sha": "275cbb8462102d9e8c52bf219e82e164ea94038f"
+      },
+      {
+        "name": "bvolpato/pin-licensed-dynamic-source",
+        "sha": "505216d1c3a225885f4698d775856f38bb710dfc"
+      },
+      {
+        "name": "bvolpato/preserve-signer-mirror-config",
+        "sha": "80a4a202814e7ea9190b11b63e6f883dfc66a35d"
+      },
+      {
+        "name": "bvolpato/raw-active-display-capture",
+        "sha": "fcce55b91f8950fcf59182300a442b68a11dd50c"
+      },
+      {
+        "name": "bvolpato/runtime-usb-driverkit",
+        "sha": "90e0c6cbab77ad852984c1a4239b0d3a8563d13e"
+      },
+      {
+        "name": "bvolpato/runtime-usb-driverkit-2.14",
+        "sha": "b58c29c6744945e95b4e47ec73268c9ea45e3b6c"
+      },
+      {
+        "name": "codex/merge-remaining-prs",
+        "sha": "2ef4f8d0e63ac9d1ea25b5343df4406e5549a586"
+      },
+      {
+        "name": "dev",
+        "sha": "0b896ef8cf9c08f2c2acbe8874bd83162852e3a8"
+      },
+      {
+        "name": "docs/notarized-2.15.0",
+        "sha": "bfc7dd003ff8559501aea2ac5153a0bf6f6341ba"
+      },
+      {
+        "name": "fix/macos26-host-guests",
+        "sha": "130304833e39dc42a20d770fad462bb6174251ad"
+      },
+      {
+        "name": "fix/review-732",
+        "sha": "2eac4eb5bbd1030faa1fd98099af6b37161c9294"
+      },
+      {
+        "name": "main",
+        "sha": "22f7dc3e39c9ae11770bcf629f4f1bf799ce0e61"
+      },
+      {
+        "name": "pr/dyld-mapping-lifetime",
+        "sha": "2fdcf16ca1fedea254355c0331182c7a43fe8ffa"
+      },
+      {
+        "name": "pr/iphone16-guest-geometry",
+        "sha": "5e302713de3e39b4ff5b2eed70c55bbaefed1803"
+      },
+      {
+        "name": "pr/recovery-client-retry",
+        "sha": "f20bf92a32e084ff6adcc46eb2125114351d75a4"
+      }
+    ]
+  },
+  {
+    "repo": "caishuai/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "f7faf866eec38b0cbd69e29fb4805c6c154efbc7"
+      }
+    ]
+  },
+  {
+    "repo": "ccblueli/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "2a3487bd3cf5b519c5faf44d00d107d0a5cab56c"
+      }
+    ]
+  },
+  {
+    "repo": "chbeer/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "fd1610d7928aacd6cbc060722bb27fd7d2c76315"
+      }
+    ]
+  },
+  {
+    "repo": "cheniosc/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "39ecd9ab0f01efe64d49aff189cf953f9683eb17"
+      }
+    ]
+  },
+  {
+    "repo": "ChenSiWu/vphone-cli",
+    "branches": [
+      {
+        "name": "feat/vphoned-modules-and-menus",
+        "sha": "bb12565070e04ce199c02a03224e270565569087"
+      },
+      {
+        "name": "main",
+        "sha": "c90c88637e73c123fbaa4e5966b6cf9b0fe8d0d5"
+      },
+      {
+        "name": "swift-yyds",
+        "sha": "02ed56b7d5b392819d9a468881b3b968ad29ee6b"
+      }
+    ]
+  },
+  {
+    "repo": "cla7aye15I4nd/opensource-Lakr233__vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "cb23353eb61b74186bc0b345fe34e6868b733746"
+      }
+    ]
+  },
+  {
+    "repo": "cmtdgckhyh-collab/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "047642f8e89b42c6219be569cc5efc675320613b"
+      }
+    ]
+  },
+  {
+    "repo": "codingLv/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "f7faf866eec38b0cbd69e29fb4805c6c154efbc7"
+      }
+    ]
+  },
+  {
+    "repo": "Cogitarian/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "0499378c7c46b1bfab5f1d9c3ffdb158e24bb083"
+      }
+    ]
+  },
+  {
+    "repo": "comicchang/vphone-cli",
+    "branches": [
+      {
+        "name": "archive/pre-upstream-20260930",
+        "sha": "7a9edd013c0464f264b1e36ead268a0190ffa64a"
+      },
+      {
+        "name": "fix/lsd-embedded-reg-ios27",
+        "sha": "0adecd472292d106e22574f74dc39820475f6ea1"
+      },
+      {
+        "name": "main",
+        "sha": "5ec419e7d5544169e29bfa2e0cab2540fb59080b"
+      }
+    ]
+  },
+  {
+    "repo": "dashixiong91/vphone-cli",
+    "branches": [
+      {
+        "name": "codex/merge-remaining-prs",
+        "sha": "2ef4f8d0e63ac9d1ea25b5343df4406e5549a586"
+      },
+      {
+        "name": "docs/notarized-2.15.0",
+        "sha": "bfc7dd003ff8559501aea2ac5153a0bf6f6341ba"
+      },
+      {
+        "name": "fix/macos26-host-guests",
+        "sha": "130304833e39dc42a20d770fad462bb6174251ad"
+      },
+      {
+        "name": "fix/review-732",
+        "sha": "2eac4eb5bbd1030faa1fd98099af6b37161c9294"
+      },
+      {
+        "name": "fix/shorebird-aot-remap-8000",
+        "sha": "152a65be9877975573f615f1a1f7410827a59286"
+      },
+      {
+        "name": "main",
+        "sha": "8c3630c79c6b1f016fe189bf21933b8850590357"
+      }
+    ]
+  },
+  {
+    "repo": "DylanMcD8/vphone-cli",
+    "branches": [
+      {
+        "name": "homeview",
+        "sha": "9617b9b880f70aeb66b0ee6a33f3f086f6908cf4"
+      },
+      {
+        "name": "main",
+        "sha": "57bbc93c5a3498919f2cea0ed0be60d83e28055b"
+      }
+    ]
+  },
+  {
+    "repo": "Echoxiawan/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "8c3630c79c6b1f016fe189bf21933b8850590357"
+      }
+    ]
+  },
+  {
+    "repo": "edx-sayed-salem/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "fd1610d7928aacd6cbc060722bb27fd7d2c76315"
+      }
+    ]
+  },
+  {
+    "repo": "ether09988/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "7d633c9ab373880bf00f6964a29964269e8eb53b"
+      }
+    ]
+  },
+  {
+    "repo": "EzufIII/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "91242f2490ffd9906ad834246e79dca8abc82f1e"
+      }
+    ]
+  },
+  {
+    "repo": "Fakeriz/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "7d633c9ab373880bf00f6964a29964269e8eb53b"
+      }
+    ]
+  },
+  {
+    "repo": "frank8ai/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "9b8471be3f041ac7de366203603d548f350d0e10"
+      }
+    ]
+  },
+  {
+    "repo": "gru2007/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "b5cc3240f2d252e6d462353d81df2be434a998ba"
+      }
+    ]
+  },
+  {
+    "repo": "guangye2026/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "755d49191a6f0b78fbcdde4f43d56ce45c9bee90"
+      }
+    ]
+  },
+  {
+    "repo": "guoPhineas/vphone-cli",
+    "branches": [
+      {
+        "name": "feat/sensor/gyroscope",
+        "sha": "b2a186160e89900c2ab73b388abbeccd5644254c"
+      },
+      {
+        "name": "feature/custom-location",
+        "sha": "e34917d9300766b4892e03b77ff3a9af6d174f67"
+      },
+      {
+        "name": "fix/cssc-bootstrap-planning",
+        "sha": "a3d1b6f254708488152c2c6cb48a22591e9d1c8c"
+      },
+      {
+        "name": "fix/cssc-kernel-emulation",
+        "sha": "7b49e5c6dba44b7969d9efc8daa66125ad8003e9"
+      },
+      {
+        "name": "fix/ipa-armv7-fat-slices",
+        "sha": "47a35739263090398c225ca5cbc65f8ae38f6290"
+      },
+      {
+        "name": "fix/launchpad-service-trimming",
+        "sha": "dcbf94944f5a1246f90fbad9148f8cab9ab6f48a"
+      },
+      {
+        "name": "fix/preboot-identity-guest-update",
+        "sha": "b8e9ea7c310a955b8f188180f8db797f486ce4ee"
+      },
+      {
+        "name": "fix/sensor/coreMotion",
+        "sha": "2be089b4417dad4f2afdf35de69888375533f512"
+      },
+      {
+        "name": "main",
+        "sha": "8c5aa43928a50ff97e5825d7a527756030bfee2c"
+      },
+      {
+        "name": "ui/sensor",
+        "sha": "50751538c2c3637c5fbb468b65955bc717573dc5"
+      },
+      {
+        "name": "update/diskutil",
+        "sha": "a7fd759dca016df6c9cfab61df31201db4ae7ff9"
+      }
+    ]
+  },
+  {
+    "repo": "hakkaboye/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "6171ac8c379fbca3713002e12cc5507ff9e4a49a"
+      }
+    ]
+  },
+  {
+    "repo": "harshshah9193/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "90dc4a3f1a64e9601848eb8ee08dda8a050b7973"
+      }
+    ]
+  },
+  {
+    "repo": "helloworld9912/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "39ecd9ab0f01efe64d49aff189cf953f9683eb17"
+      }
+    ]
+  },
+  {
+    "repo": "hellozengkui/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "2a0d3aca9fb79344d939365cc337b915ae9f2f97"
+      }
+    ]
+  },
+  {
+    "repo": "hetrixq/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "0499378c7c46b1bfab5f1d9c3ffdb158e24bb083"
+      }
+    ]
+  },
+  {
+    "repo": "hjainibuli/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "f7faf866eec38b0cbd69e29fb4805c6c154efbc7"
+      }
+    ]
+  },
+  {
+    "repo": "hxhlb/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "770c66aecfc691e38b430451d8238de2ffd081c8"
+      }
+    ]
+  },
+  {
+    "repo": "hypeissad/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "7d633c9ab373880bf00f6964a29964269e8eb53b"
+      }
+    ]
+  },
+  {
+    "repo": "i5dr0id/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "8c3630c79c6b1f016fe189bf21933b8850590357"
+      }
+    ]
+  },
+  {
+    "repo": "Ideora2026/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "7d633c9ab373880bf00f6964a29964269e8eb53b"
+      }
+    ]
+  },
+  {
+    "repo": "iEthereal/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "f7faf866eec38b0cbd69e29fb4805c6c154efbc7"
+      }
+    ]
+  },
+  {
+    "repo": "ihgr34/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "8c3630c79c6b1f016fe189bf21933b8850590357"
+      }
+    ]
+  },
+  {
+    "repo": "insidegui/vphone-cli",
+    "branches": [
+      {
+        "name": "appletv-4thgen",
+        "sha": "72c3658fa5b20f3eb2cfc5579884825708ae7e93"
+      },
+      {
+        "name": "appletv-remote",
+        "sha": "ffcb10e03faf6cbf2aa3abc54d99792a50f6c897"
+      },
+      {
+        "name": "expand-btvc",
+        "sha": "ff29f49fdc4571a9f00de460c4906f20f0255657"
+      },
+      {
+        "name": "homepod-ddi",
+        "sha": "bdb5d83d10538291dc4d1950714d6105cb4f5b53"
+      },
+      {
+        "name": "homepod-enhancements",
+        "sha": "d2507e5199369e33d9e6947ae565b5359d2dd6ad"
+      },
+      {
+        "name": "homepod-enhancements-1",
+        "sha": "f2b1d06de8e7f3b1b2e974153c208e4b04081344"
+      },
+      {
+        "name": "homepod-ui",
+        "sha": "a7d161290f4bd18ac9b5cc8cef0a25bb4ade584f"
+      },
+      {
+        "name": "homeview",
+        "sha": "cdb97393207ab3d55c18276c2bfe05806ab11dd4"
+      },
+      {
+        "name": "main",
+        "sha": "39324ee7fcbb1d909bfa293f6188a8ef752ba734"
+      },
+      {
+        "name": "studio-display-xdr",
+        "sha": "5ecd0998542ed00b37336cf9390a94063fc46a56"
+      }
+    ]
+  },
+  {
+    "repo": "Intorain/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "65b68dd42bf5a6835250ae8d9624d94cddb6842c"
+      }
+    ]
+  },
+  {
+    "repo": "its-mr-monday/vphone-cli",
+    "branches": [
+      {
+        "name": "cyberm-enhancements",
+        "sha": "0dea5394f4d787178a281e1e846b11a1d4a185ea"
+      },
+      {
+        "name": "cyberm-fixes",
+        "sha": "21e51e798d643672e4bddf2cebaaba0ce6c36f5c"
+      },
+      {
+        "name": "cyberm-version",
+        "sha": "13b78238d4e09b00186084ae3d63b58a6e6242b7"
+      },
+      {
+        "name": "main",
+        "sha": "0499378c7c46b1bfab5f1d9c3ffdb158e24bb083"
+      }
+    ]
+  },
+  {
+    "repo": "Jamarin0/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "f7faf866eec38b0cbd69e29fb4805c6c154efbc7"
+      }
+    ]
+  },
+  {
+    "repo": "Jas383939/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "2a0d3aca9fb79344d939365cc337b915ae9f2f97"
+      }
+    ]
+  },
+  {
+    "repo": "jaydergham/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "0499378c7c46b1bfab5f1d9c3ffdb158e24bb083"
+      }
+    ]
+  },
+  {
+    "repo": "Jiangjiang-jiang/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "d14231a474fe82318b0c4f1d79cc79a2369f53c8"
+      }
+    ]
+  },
+  {
+    "repo": "joelczk/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "65b68dd42bf5a6835250ae8d9624d94cddb6842c"
+      }
+    ]
+  },
+  {
+    "repo": "jsj/vphone-cli",
+    "branches": [
+      {
+        "name": "fix/camera-session-lifetime",
+        "sha": "9b6b74d0116051768c943bc6cb5e6d28cd73075e"
+      },
+      {
+        "name": "jsj/fail",
+        "sha": "994922b445f1868f619a3a536c063bf7950fe3a4"
+      },
+      {
+        "name": "jsj/headless",
+        "sha": "4c7db5c126eadb96c7a9ba039d2a75f11b517a95"
+      },
+      {
+        "name": "jsj/ipa-install-cli",
+        "sha": "5b9ad56af0931e4fe19a828a72bcb54a7f8d1b35"
+      },
+      {
+        "name": "jsj/local",
+        "sha": "594184613923176d4ac1f4e39a0e3e11d66119cd"
+      },
+      {
+        "name": "main",
+        "sha": "df9f0f2fa539ead93add00daca9485f1ad449bca"
+      }
+    ]
+  },
+  {
+    "repo": "k3rnelpan11c/vphone-cli",
+    "branches": [
+      {
+        "name": "codex/merge-remaining-prs",
+        "sha": "2ef4f8d0e63ac9d1ea25b5343df4406e5549a586"
+      },
+      {
+        "name": "docs/notarized-2.15.0",
+        "sha": "bfc7dd003ff8559501aea2ac5153a0bf6f6341ba"
+      },
+      {
+        "name": "fix/macos26-host-guests",
+        "sha": "130304833e39dc42a20d770fad462bb6174251ad"
+      },
+      {
+        "name": "fix/review-732",
+        "sha": "2eac4eb5bbd1030faa1fd98099af6b37161c9294"
+      },
+      {
+        "name": "main",
+        "sha": "e80d5e941a6f0a713afe1cb957b932efd07f404e"
+      }
+    ]
+  },
+  {
+    "repo": "kamui-fin/vphone-cli",
+    "branches": [
+      {
+        "name": "codex/merge-remaining-prs",
+        "sha": "2ef4f8d0e63ac9d1ea25b5343df4406e5549a586"
+      },
+      {
+        "name": "compat/social-video",
+        "sha": "556c2ab1755af611d2049df7b7ea4413b3d82604"
+      },
+      {
+        "name": "docs/notarized-2.15.0",
+        "sha": "bfc7dd003ff8559501aea2ac5153a0bf6f6341ba"
+      },
+      {
+        "name": "fix/macos26-host-guests",
+        "sha": "130304833e39dc42a20d770fad462bb6174251ad"
+      },
+      {
+        "name": "fix/review-732",
+        "sha": "2eac4eb5bbd1030faa1fd98099af6b37161c9294"
+      },
+      {
+        "name": "main",
+        "sha": "a78483a30430b7b3ecdf51536881fd97a440da81"
+      }
+    ]
+  },
+  {
+    "repo": "keyman9848/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "4f18540d9335c2868286cd03c0a1796811fb3d2f"
+      }
+    ]
+  },
+  {
+    "repo": "Kila2/vphone-cli",
+    "branches": [
+      {
+        "name": "feature/libmis-dsc-patcher",
+        "sha": "a3d2382e2ecab8789c25c289e3a499003ef6b154"
+      },
+      {
+        "name": "main",
+        "sha": "f476a4df2d6d630f1fafd9acdd28dead8f3deb9e"
+      },
+      {
+        "name": "pr/diskutil-volume-unmount",
+        "sha": "a17c95d1908b868ee18909069a2367e9a9440cb1"
+      },
+      {
+        "name": "pr/photos-import",
+        "sha": "ddac2d1e5c7edca918d8db18ea12ffd4369cff3a"
+      },
+      {
+        "name": "pr/remove-legacy-limera1n",
+        "sha": "807d5174bba06d066acbfd244dc4e150c56d41b9"
+      },
+      {
+        "name": "pr/txm-native-classification",
+        "sha": "3121889069c2b56c579773119f7a7471c416766c"
+      }
+    ]
+  },
+  {
+    "repo": "kuishou/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "8c3630c79c6b1f016fe189bf21933b8850590357"
+      }
+    ]
+  },
+  {
+    "repo": "LACOOBYE/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "047642f8e89b42c6219be569cc5efc675320613b"
+      }
+    ]
+  },
+  {
+    "repo": "lapfelix/vphone-cli",
+    "branches": [
+      {
+        "name": "feature/research-guests-normal-sip",
+        "sha": "c8ce451d066837866357636ffd4eefe86380a9a7"
+      },
+      {
+        "name": "feature/research-guests-upstream",
+        "sha": "2b514ebc5ef8b361c06d772c4fb0069146f13e49"
+      },
+      {
+        "name": "main",
+        "sha": "0b0377f1cc21d514b9a1c4bf57af44e807e1d662"
+      }
+    ]
+  },
+  {
+    "repo": "lianbeast/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "8c3630c79c6b1f016fe189bf21933b8850590357"
+      }
+    ]
+  },
+  {
+    "repo": "liming19552-cmd/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "f7faf866eec38b0cbd69e29fb4805c6c154efbc7"
+      }
+    ]
+  },
+  {
+    "repo": "liupzone/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "583684766d948e50430d4f37f75db1c84e5b19be"
+      }
+    ]
+  },
+  {
+    "repo": "LiuWoodsCode/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "df5663860bc44a8a3359862f97f6c869c628ada8"
+      },
+      {
+        "name": "new",
+        "sha": "a1603ca146e33bc0367b505af1d2c258f9cc7287"
+      },
+      {
+        "name": "old",
+        "sha": "df5663860bc44a8a3359862f97f6c869c628ada8"
+      },
+      {
+        "name": "spoof-hw",
+        "sha": "d7d21ac7d6ea7304c2d8864db2c21b7fd78f1152"
+      },
+      {
+        "name": "vpad",
+        "sha": "5d32e2d57d5b097575bee4d8c634ba6eeaccdabd"
+      }
+    ]
+  },
+  {
+    "repo": "lucadeg/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "7d633c9ab373880bf00f6964a29964269e8eb53b"
+      }
+    ]
+  },
+  {
+    "repo": "luken11/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "69393775aee4fb8fee3b25564e755d67607d2e98"
+      },
+      {
+        "name": "watch-audio",
+        "sha": "83197152137ddd2aad70eb121d6b88a9afbee36e"
+      },
+      {
+        "name": "watch-enhancements",
+        "sha": "69393775aee4fb8fee3b25564e755d67607d2e98"
+      },
+      {
+        "name": "watch-properties",
+        "sha": "57bbc93c5a3498919f2cea0ed0be60d83e28055b"
+      }
+    ]
+  },
+  {
+    "repo": "luxjoce/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "8c3630c79c6b1f016fe189bf21933b8850590357"
+      }
+    ]
+  },
+  {
+    "repo": "Machiavelli-DaVinci/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "f7faf866eec38b0cbd69e29fb4805c6c154efbc7"
+      }
+    ]
+  },
+  {
+    "repo": "mario-eth/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "6aca0afb0eb5a89c444b65cef4e79fcee50a981f"
+      }
+    ]
+  },
+  {
+    "repo": "Marvae/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "faafe5080ec54fecdc7b4766fa93d9f771d6c27c"
+      },
+      {
+        "name": "pr-assets-always-on",
+        "sha": "9128a7aba325be19a7c5093eeaf60528c3839f7d"
+      }
+    ]
+  },
+  {
+    "repo": "MasamiYo/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "47fcecde17291b18aaa99230ecd94046df316f1a"
+      }
+    ]
+  },
+  {
+    "repo": "meerkatone/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "770c66aecfc691e38b430451d8238de2ffd081c8"
+      }
+    ]
+  },
+  {
+    "repo": "mikeKane/vphone-cli",
+    "branches": [
+      {
+        "name": "fix/shared-codesign-seal",
+        "sha": "8d485b16b287bae42ebe0b94fd4f321a40a9de0f"
+      },
+      {
+        "name": "main",
+        "sha": "8c3630c79c6b1f016fe189bf21933b8850590357"
+      }
+    ]
+  },
+  {
+    "repo": "minernote/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "6171ac8c379fbca3713002e12cc5507ff9e4a49a"
+      }
+    ]
+  },
+  {
+    "repo": "mojo5-ai/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "9bd3fa2862251a2860d165a75c36fc362ffc3a36"
+      }
+    ]
+  },
+  {
+    "repo": "momobadarni/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "39324ee7fcbb1d909bfa293f6188a8ef752ba734"
+      }
+    ]
+  },
+  {
+    "repo": "mpass99/vphone-cli",
+    "branches": [
+      {
+        "name": "feature/cryptex-support",
+        "sha": "1797d45ad4cf3b0c355016f6fa92a489438751c4"
+      },
+      {
+        "name": "feature/frida-srd-patches",
+        "sha": "fcad5290469ecaf1fcd3c10e98da93148eac6ef3"
+      },
+      {
+        "name": "feature/homepod-kernelcache-mix",
+        "sha": "c124fb7bf30f91cd88fc87137a7510fdc728b596"
+      },
+      {
+        "name": "feature/ios18-standard",
+        "sha": "6aba8119d45ea7d59532a020bbbbacdcf0b7af11"
+      },
+      {
+        "name": "feature/ios18",
+        "sha": "a1c978a7afb7a262273ee7e75847e74974040f2b"
+      },
+      {
+        "name": "feature/minimal-preset",
+        "sha": "9e8332391b3df45dd9b2a79bf6bb93f66e362bf9"
+      },
+      {
+        "name": "feature/nat-peers",
+        "sha": "a52688cb7ffca249f744597631a7ea5ce2b77fdc"
+      },
+      {
+        "name": "feature/patchless",
+        "sha": "5d102a1b4a6900bf02f8e5e7c7bfae0cf666540e"
+      },
+      {
+        "name": "feature/patchless-26x",
+        "sha": "cb4c18a10c2d86d8a6efa0e7d639636561b655e6"
+      },
+      {
+        "name": "feature/patchless-binpack",
+        "sha": "e8660b830412976714e2cc41b8cba06132c53c35"
+      },
+      {
+        "name": "feature/scaler-accelerator",
+        "sha": "cf4073bb2fd4cd5217ef55fad9cf04a3681827dd"
+      },
+      {
+        "name": "feature/userspace-debugging",
+        "sha": "30a46d033b5e1fec542346e2e82fb8ffd35c3705"
+      },
+      {
+        "name": "feature/vresearch101",
+        "sha": "52eead1e0c593cc68ac09422b347e5950c21c921"
+      },
+      {
+        "name": "feature/watch-guest",
+        "sha": "95809001d3231347b2abcb3b135414f4bbe2190f"
+      },
+      {
+        "name": "feature/watch-pair-guests",
+        "sha": "a44273ee19395969a4f306e60b8577e267ed0f7c"
+      },
+      {
+        "name": "fix/create-2.12.1",
+        "sha": "afcbfa5d7f9652750fbb5a2cbc0a5b6809c6c9ef"
+      },
+      {
+        "name": "fix/dynamic-apfs-sealvolume",
+        "sha": "1dd5f2b248f61a0f4969f8508214ecdc7eb8869a"
+      },
+      {
+        "name": "fix/fw-patch-filesystem-step",
+        "sha": "6be905b66286ca9475bc01bbd3d8da005def6f77"
+      },
+      {
+        "name": "fix/home-swipe",
+        "sha": "f22628872c7f1315824af0aed19553e1335f8d88"
+      },
+      {
+        "name": "fix/manifest-patcher",
+        "sha": "f966dd253f27543cb3842ab45d17cb4489b201c7"
+      },
+      {
+        "name": "fix/video-acceleration",
+        "sha": "eba8195953aee0c9e842e5f03a9e3f2c50c7b443"
+      },
+      {
+        "name": "main",
+        "sha": "77d4a04c554efbc1d0230ea6903f5f152148d28a"
+      },
+      {
+        "name": "patchless-hardening",
+        "sha": "a7604d2deef09c30c4413d0badd682257dea403e"
+      },
+      {
+        "name": "pr/minimal-stock-llb",
+        "sha": "83075f1157592c5f41fc466487ae5128fc95bf4e"
+      },
+      {
+        "name": "pr/minimal-trust-cache",
+        "sha": "f278c766f5c0cd3f6f9d2775a226e13ee36932e8"
+      },
+      {
+        "name": "pr/restore-tree-disk-space",
+        "sha": "f8ddb5f171f554c7f06098209f34c389b8f88d10"
+      },
+      {
+        "name": "pr/vphoned-paravirt-entitlements",
+        "sha": "65676b03657aa8df49de8f5dda4a55103a916e53"
+      }
+    ]
+  },
+  {
+    "repo": "MrZaKaRiA/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "8c3630c79c6b1f016fe189bf21933b8850590357"
+      }
+    ]
+  },
+  {
+    "repo": "mzjlbz/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "f7faf866eec38b0cbd69e29fb4805c6c154efbc7"
+      }
+    ]
+  },
+  {
+    "repo": "nailson-landim/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "7d633c9ab373880bf00f6964a29964269e8eb53b"
+      }
+    ]
+  },
+  {
+    "repo": "nekohasekai/vphone-cli",
+    "branches": [
+      {
+        "name": "allow-local-pairing",
+        "sha": "586ca4af8ee832b43f82ecf76ab05f97a62ec219"
+      },
+      {
+        "name": "banded-stream-gpu-deadlock",
+        "sha": "66956a87ec30bdfda6c8d7e21d4d8ced2dd8b00e"
+      },
+      {
+        "name": "docs/owngoal-bootstrap-vphone",
+        "sha": "73ae8482469456bfb31d5328107069434d1e545c"
+      },
+      {
+        "name": "jetsam-multiplier",
+        "sha": "fa3c2520ab6c3fc9ecc81370a19c2656a669b09a"
+      },
+      {
+        "name": "main",
+        "sha": "ba9d0230c8da57bf5794e732e2f77884bc8ae5fe"
+      },
+      {
+        "name": "register-package-apps",
+        "sha": "872a8b4351ed43a108fa7b6404c43fe3ade1d965"
+      },
+      {
+        "name": "txm-cloudos-26.1",
+        "sha": "d1bbb22123a80b97740f2281dc8699ef1870aba6"
+      },
+      {
+        "name": "vm-text-recognition-e5",
+        "sha": "c227be57a964708e00ee52bbcbb238f2fdf7129b"
+      }
+    ]
+  },
+  {
+    "repo": "nhs-den/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "583684766d948e50430d4f37f75db1c84e5b19be"
+      }
+    ]
+  },
+  {
+    "repo": "NightCode101/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "f7faf866eec38b0cbd69e29fb4805c6c154efbc7"
+      }
+    ]
+  },
+  {
+    "repo": "NiloyTheSpd/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "39324ee7fcbb1d909bfa293f6188a8ef752ba734"
+      }
+    ]
+  },
+  {
+    "repo": "NonBytes/vphone-cli",
+    "branches": [
+      {
+        "name": "codex/gadget-ipa-deployment",
+        "sha": "f4ce8350f36e89e371bb14c16c373447479c91cb"
+      },
+      {
+        "name": "codex/gadget-session-manager",
+        "sha": "24fa36204f0dd08d77c9db80ab950b90c007f5c3"
+      },
+      {
+        "name": "codex/ipa-export",
+        "sha": "361a5eec1ee1ea12eb585a82d2f9fa80a564978b"
+      },
+      {
+        "name": "codex/launchpad-pentest-tools",
+        "sha": "78a2d29f99357e2cab96c783c2e5ae9828259400"
+      },
+      {
+        "name": "codex/merge-remaining-prs",
+        "sha": "2ef4f8d0e63ac9d1ea25b5343df4406e5549a586"
+      },
+      {
+        "name": "codex/patch-ipa-gadget",
+        "sha": "c2e6cc8b5655eaee7c4d25dcc78d431e03e8ffd1"
+      },
+      {
+        "name": "codex/readme-pentest-workflow",
+        "sha": "6729e1917843195016749e326025bdce0f7d5fe9"
+      },
+      {
+        "name": "feature/frida-server-menu",
+        "sha": "65031676d5fada3dd6693da3d4d1064a5a3b1243"
+      },
+      {
+        "name": "feature/guest-ca-certificates",
+        "sha": "73846cf9445ec3a13f1a567cd811db3f501775dd"
+      },
+      {
+        "name": "feature/guest-proxy-menu",
+        "sha": "de99880f786717609644b30552ccbb07b0c92d76"
+      },
+      {
+        "name": "fix/macos26-host-guests",
+        "sha": "130304833e39dc42a20d770fad462bb6174251ad"
+      },
+      {
+        "name": "fix/review-732",
+        "sha": "2eac4eb5bbd1030faa1fd98099af6b37161c9294"
+      },
+      {
+        "name": "integration/latest-camera-proxy",
+        "sha": "de8d60e0d42ab4e612c8e064524b9a39568003bb"
+      },
+      {
+        "name": "mac-camera",
+        "sha": "8b7648dee91b8816e1ae4338f405350410f07a95"
+      },
+      {
+        "name": "main",
+        "sha": "e32f299886aa88eb6913644ebab1d4738823ae87"
+      },
+      {
+        "name": "upstream/mac-camera",
+        "sha": "dd3dc503a2331397c1d9a48364a164f9d0a90cdf"
+      }
+    ]
+  },
+  {
+    "repo": "ofekbetzalel/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "5b868523c274410ac260b5e5e6fd1f94b9509b3f"
+      }
+    ]
+  },
+  {
+    "repo": "OndarianEnterprises/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "5b868523c274410ac260b5e5e6fd1f94b9509b3f"
+      }
+    ]
+  },
+  {
+    "repo": "OnyxAxisOwO/vphone-cli",
+    "branches": [
+      {
+        "name": "codex/merge-remaining-prs",
+        "sha": "2ef4f8d0e63ac9d1ea25b5343df4406e5549a586"
+      },
+      {
+        "name": "feat/ios16-desktop-bringup",
+        "sha": "8cdd718732f5786cd7e63a06cf1f52a4093e16b2"
+      },
+      {
+        "name": "feat/ios17-desktop-bringup",
+        "sha": "7d5b44dac6a9a0decd93aba8d7810efd11bbaa75"
+      },
+      {
+        "name": "feat/visionos-native-ui",
+        "sha": "f5a5d600dd9da12212d33649856f9f272ff1e27b"
+      },
+      {
+        "name": "fix/macos26-host-guests",
+        "sha": "130304833e39dc42a20d770fad462bb6174251ad"
+      },
+      {
+        "name": "fix/review-732",
+        "sha": "2eac4eb5bbd1030faa1fd98099af6b37161c9294"
+      },
+      {
+        "name": "fix/visionos-environment",
+        "sha": "5d4b520432c952e8b848220ff88d0d8b3b5e3006"
+      },
+      {
+        "name": "main",
+        "sha": "57bbc93c5a3498919f2cea0ed0be60d83e28055b"
+      }
+    ]
+  },
+  {
+    "repo": "op3v/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "ee0fd06b605ee24014ad38a046a55a6313d09c73"
+      }
+    ]
+  },
+  {
+    "repo": "oslakdev/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "ee0fd06b605ee24014ad38a046a55a6313d09c73"
+      }
+    ]
+  },
+  {
+    "repo": "paperwhite2023/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "f7faf866eec38b0cbd69e29fb4805c6c154efbc7"
+      }
+    ]
+  },
+  {
+    "repo": "phanquocviet8x/vphone-cli",
+    "branches": [
+      {
+        "name": "feat/vphoned-modules-and-menus",
+        "sha": "bb12565070e04ce199c02a03224e270565569087"
+      },
+      {
+        "name": "main",
+        "sha": "7d633c9ab373880bf00f6964a29964269e8eb53b"
+      },
+      {
+        "name": "swift-yyds",
+        "sha": "02ed56b7d5b392819d9a468881b3b968ad29ee6b"
+      }
+    ]
+  },
+  {
+    "repo": "Pinball3D/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "57bbc93c5a3498919f2cea0ed0be60d83e28055b"
+      }
+    ]
+  },
+  {
+    "repo": "Plintash/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "8c5aa43928a50ff97e5825d7a527756030bfee2c"
+      }
+    ]
+  },
+  {
+    "repo": "rabernethy/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "047642f8e89b42c6219be569cc5efc675320613b"
+      }
+    ]
+  },
+  {
+    "repo": "RancorHunter/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "047642f8e89b42c6219be569cc5efc675320613b"
+      }
+    ]
+  },
+  {
+    "repo": "RaziqGit/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "39324ee7fcbb1d909bfa293f6188a8ef752ba734"
+      }
+    ]
+  },
+  {
+    "repo": "retX0/vphone-cli",
+    "branches": [
+      {
+        "name": "codex/fix-frida-stalker",
+        "sha": "784234c2f65d40734dbfb6cb14bc5dfa2d221d3d"
+      },
+      {
+        "name": "codex/fix-roothide-ssh-bootstrap",
+        "sha": "b904d1660852c344d8250f25180f953265a946ca"
+      },
+      {
+        "name": "codex/launchpad-current-host-policy",
+        "sha": "ed0aca707271b3a0fdfc7279d3702788abdaaa5c"
+      },
+      {
+        "name": "features/amfree",
+        "sha": "515a151ab56d36303507800502ad4b9bd07e65ab"
+      },
+      {
+        "name": "fix/amfid-running",
+        "sha": "e0478eaccbcd465adb05d1aecdc20d1b5aaf0325"
+      },
+      {
+        "name": "fix/iOS-26-0",
+        "sha": "1dfcb4131461a0634ca1afc2a70f5c5d472c641e"
+      },
+      {
+        "name": "fix/libtoolize-error",
+        "sha": "c51ca4b8b9000b8ff740e2b8da438a4944aa1d66"
+      },
+      {
+        "name": "main",
+        "sha": "6615c8bcbcffc1f2842de74320cdc562d2512630"
+      }
+    ]
+  },
+  {
+    "repo": "reverdyyyyy/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "ee0fd06b605ee24014ad38a046a55a6313d09c73"
+      }
+    ]
+  },
+  {
+    "repo": "RivenLau/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "4f18540d9335c2868286cd03c0a1796811fb3d2f"
+      }
+    ]
+  },
+  {
+    "repo": "Rivien2010/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "2a0d3aca9fb79344d939365cc337b915ae9f2f97"
+      }
+    ]
+  },
+  {
+    "repo": "robincoin/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "f7faf866eec38b0cbd69e29fb4805c6c154efbc7"
+      }
+    ]
+  },
+  {
+    "repo": "rothilion26/vphone-cli",
+    "branches": [
+      {
+        "name": "codex/merge-remaining-prs",
+        "sha": "2ef4f8d0e63ac9d1ea25b5343df4406e5549a586"
+      },
+      {
+        "name": "docs/notarized-2.15.0",
+        "sha": "bfc7dd003ff8559501aea2ac5153a0bf6f6341ba"
+      },
+      {
+        "name": "fix/exc-guard-cloudos26",
+        "sha": "69850c98148defdaa3ffb0884b5356c8516148c5"
+      },
+      {
+        "name": "fix/macos26-host-guests",
+        "sha": "130304833e39dc42a20d770fad462bb6174251ad"
+      },
+      {
+        "name": "fix/review-732",
+        "sha": "2eac4eb5bbd1030faa1fd98099af6b37161c9294"
+      },
+      {
+        "name": "main",
+        "sha": "3e49996397df1f9c13197a27c90dbec3e2ab4376"
+      }
+    ]
+  },
+  {
+    "repo": "rowaterguy/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "39ecd9ab0f01efe64d49aff189cf953f9683eb17"
+      }
+    ]
+  },
+  {
+    "repo": "rushi/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "9b8471be3f041ac7de366203603d548f350d0e10"
+      }
+    ]
+  },
+  {
+    "repo": "RYDE-PLAY/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "047642f8e89b42c6219be569cc5efc675320613b"
+      }
+    ]
+  },
+  {
+    "repo": "s73va/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "2279ecb313d6607310755a66dce7f7c9a82e51a7"
+      }
+    ]
+  },
+  {
+    "repo": "samigroup/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "7d633c9ab373880bf00f6964a29964269e8eb53b"
+      }
+    ]
+  },
+  {
+    "repo": "sammmmmy58/vphone-cli",
+    "branches": [
+      {
+        "name": "codex/merge-remaining-prs",
+        "sha": "2ef4f8d0e63ac9d1ea25b5343df4406e5549a586"
+      },
+      {
+        "name": "docs/notarized-2.15.0",
+        "sha": "bfc7dd003ff8559501aea2ac5153a0bf6f6341ba"
+      },
+      {
+        "name": "fix/macos26-host-guests",
+        "sha": "130304833e39dc42a20d770fad462bb6174251ad"
+      },
+      {
+        "name": "fix/review-732",
+        "sha": "2eac4eb5bbd1030faa1fd98099af6b37161c9294"
+      },
+      {
+        "name": "main",
+        "sha": "22f7dc3e39c9ae11770bcf629f4f1bf799ce0e61"
+      }
+    ]
+  },
+  {
+    "repo": "SammySnake-d/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "56915f1a8c41facd00f93a506cdbd2e34a5708d3"
+      }
+    ]
+  },
+  {
+    "repo": "securityvoid/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "dbe9c4ff2d3df9c18c62c05d27d63fc6433e5ef1"
+      },
+      {
+        "name": "screenshot-sizing",
+        "sha": "85fd082369413a241012382ea6f5b02f87806c93"
+      }
+    ]
+  },
+  {
+    "repo": "shuixi2013/vphone-cli_bak",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "f7faf866eec38b0cbd69e29fb4805c6c154efbc7"
+      }
+    ]
+  },
+  {
+    "repo": "sia9r/vphone-cli",
+    "branches": [
+      {
+        "name": "codex/merge-remaining-prs",
+        "sha": "2ef4f8d0e63ac9d1ea25b5343df4406e5549a586"
+      },
+      {
+        "name": "docs/notarized-2.15.0",
+        "sha": "bfc7dd003ff8559501aea2ac5153a0bf6f6341ba"
+      },
+      {
+        "name": "fix/macos26-host-guests",
+        "sha": "130304833e39dc42a20d770fad462bb6174251ad"
+      },
+      {
+        "name": "fix/review-732",
+        "sha": "2eac4eb5bbd1030faa1fd98099af6b37161c9294"
+      },
+      {
+        "name": "main",
+        "sha": "583684766d948e50430d4f37f75db1c84e5b19be"
+      }
+    ]
+  },
+  {
+    "repo": "solivansprvill-droid/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "047642f8e89b42c6219be569cc5efc675320613b"
+      }
+    ]
+  },
+  {
+    "repo": "sophielangzi/vphone-cli",
+    "branches": [
+      {
+        "name": "codex/merge-remaining-prs",
+        "sha": "2ef4f8d0e63ac9d1ea25b5343df4406e5549a586"
+      },
+      {
+        "name": "fix/macos26-host-guests",
+        "sha": "130304833e39dc42a20d770fad462bb6174251ad"
+      },
+      {
+        "name": "fix/review-732",
+        "sha": "2eac4eb5bbd1030faa1fd98099af6b37161c9294"
+      },
+      {
+        "name": "main",
+        "sha": "cb23353eb61b74186bc0b345fe34e6868b733746"
+      }
+    ]
+  },
+  {
+    "repo": "starredjaco/vphone-cli",
+    "branches": [
+      {
+        "name": "feat/vphoned-modules-and-menus",
+        "sha": "bb12565070e04ce199c02a03224e270565569087"
+      },
+      {
+        "name": "main",
+        "sha": "770c66aecfc691e38b430451d8238de2ffd081c8"
+      },
+      {
+        "name": "swift-yyds",
+        "sha": "02ed56b7d5b392819d9a468881b3b968ad29ee6b"
+      }
+    ]
+  },
+  {
+    "repo": "steventroughtonsmith/vphone-cli",
+    "branches": [
+      {
+        "name": "codex/merge-remaining-prs",
+        "sha": "2ef4f8d0e63ac9d1ea25b5343df4406e5549a586"
+      },
+      {
+        "name": "fix/macos26-host-guests",
+        "sha": "130304833e39dc42a20d770fad462bb6174251ad"
+      },
+      {
+        "name": "fix/review-732",
+        "sha": "2eac4eb5bbd1030faa1fd98099af6b37161c9294"
+      },
+      {
+        "name": "main",
+        "sha": "0499378c7c46b1bfab5f1d9c3ffdb158e24bb083"
+      },
+      {
+        "name": "review/duo-input-display-camera",
+        "sha": "bb8e71c20d103aa1c166098b15146d5f929e050e"
+      }
+    ]
+  },
+  {
+    "repo": "TaroXin/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "65b68dd42bf5a6835250ae8d9624d94cddb6842c"
+      }
+    ]
+  },
+  {
+    "repo": "tasselx/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "65b68dd42bf5a6835250ae8d9624d94cddb6842c"
+      }
+    ]
+  },
+  {
+    "repo": "teymurov27/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "8c3630c79c6b1f016fe189bf21933b8850590357"
+      }
+    ]
+  },
+  {
+    "repo": "thekrishnarajput/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "8c5aa43928a50ff97e5825d7a527756030bfee2c"
+      }
+    ]
+  },
+  {
+    "repo": "timlong/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "65b68dd42bf5a6835250ae8d9624d94cddb6842c"
+      }
+    ]
+  },
+  {
+    "repo": "tomho-git/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "cb23353eb61b74186bc0b345fe34e6868b733746"
+      }
+    ]
+  },
+  {
+    "repo": "twMarriot/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "65b68dd42bf5a6835250ae8d9624d94cddb6842c"
+      }
+    ]
+  },
+  {
+    "repo": "VonLuderitz/vphone-cli",
+    "branches": [
+      {
+        "name": "codex/merge-remaining-prs",
+        "sha": "2ef4f8d0e63ac9d1ea25b5343df4406e5549a586"
+      },
+      {
+        "name": "fix/macos26-host-guests",
+        "sha": "130304833e39dc42a20d770fad462bb6174251ad"
+      },
+      {
+        "name": "fix/review-732",
+        "sha": "2eac4eb5bbd1030faa1fd98099af6b37161c9294"
+      },
+      {
+        "name": "main",
+        "sha": "7d633c9ab373880bf00f6964a29964269e8eb53b"
+      }
+    ]
+  },
+  {
+    "repo": "wdahlenburg/vphone-cli",
+    "branches": [
+      {
+        "name": "codex/bluetooth-support",
+        "sha": "3a11c4432475e5b26f44fbcaa489e8cd1639a210"
+      },
+      {
+        "name": "fix/video-subscriber-account",
+        "sha": "d491d5cf73ef3b00ab78521538483240df80b698"
+      },
+      {
+        "name": "main",
+        "sha": "39324ee7fcbb1d909bfa293f6188a8ef752ba734"
+      }
+    ]
+  },
+  {
+    "repo": "Webb-Ventures/vphone-cli-custom",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "39324ee7fcbb1d909bfa293f6188a8ef752ba734"
+      }
+    ]
+  },
+  {
+    "repo": "weborivo/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "57bbc93c5a3498919f2cea0ed0be60d83e28055b"
+      }
+    ]
+  },
+  {
+    "repo": "WhoJave/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "6454125a219d87d9b7add28397178e6eeb858dbc"
+      }
+    ]
+  },
+  {
+    "repo": "whrss9527/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "7d633c9ab373880bf00f6964a29964269e8eb53b"
+      }
+    ]
+  },
+  {
+    "repo": "WindTalkerWTF/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "aa76eef88f05ed1420a5d40ea3072d6266c965d6"
+      }
+    ]
+  },
+  {
+    "repo": "WizardofTryout/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "57bbc93c5a3498919f2cea0ed0be60d83e28055b"
+      }
+    ]
+  },
+  {
+    "repo": "wjian9938/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "f7faf866eec38b0cbd69e29fb4805c6c154efbc7"
+      }
+    ]
+  },
+  {
+    "repo": "wwh3300/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "4f18540d9335c2868286cd03c0a1796811fb3d2f"
+      }
+    ]
+  },
+  {
+    "repo": "xuhom/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "33c02fbf46bb6ffad2578b514c49137661eec98c"
+      }
+    ]
+  },
+  {
+    "repo": "yaaynn/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "3e49996397df1f9c13197a27c90dbec3e2ab4376"
+      }
+    ]
+  },
+  {
+    "repo": "yinchuandong/vphone-cli",
+    "branches": [
+      {
+        "name": "main",
+        "sha": "8c3630c79c6b1f016fe189bf21933b8850590357"
+      }
+    ]
+  },
+  {
+    "repo": "yongshuai1013/vphone-cli",
+    "branches": [
+      {
+        "name": "feat/vphoned-modules-and-menus",
+        "sha": "bb12565070e04ce199c02a03224e270565569087"
+      },
+      {
+        "name": "main",
+        "sha": "8c3630c79c6b1f016fe189bf21933b8850590357"
+      },
+      {
+        "name": "swift-yyds",
+        "sha": "02ed56b7d5b392819d9a468881b3b968ad29ee6b"
+      }
+    ]
+  },
+  {
+    "repo": "YOU54F/vphone-cli",
+    "branches": [
+      {
+        "name": "codex/merge-remaining-prs",
+        "sha": "2ef4f8d0e63ac9d1ea25b5343df4406e5549a586"
+      },
+      {
+        "name": "fix/macos26-host-guests",
+        "sha": "130304833e39dc42a20d770fad462bb6174251ad"
+      },
+      {
+        "name": "fix/review-732",
+        "sha": "2eac4eb5bbd1030faa1fd98099af6b37161c9294"
+      },
+      {
+        "name": "main",
+        "sha": "84677f850ecff8a56afca7b5b78797c0b13f69fe"
+      }
+    ]
+  },
+  {
+    "repo": "zhaoawd/vphone-cli",
+    "branches": [
+      {
+        "name": "autophone/release",
+        "sha": "bb533bd733081363b898b5186b6a5e52029b3c1b"
+      },
+      {
+        "name": "codex/autophone-dual-host-20261101",
+        "sha": "bb38a2781f3b5f651b5123da9865d9c59abd30b4"
+      },
+      {
+        "name": "codex/autophone-local-validation",
+        "sha": "6bf107079d4f8f0398514b49d1251197e75060f7"
+      },
+      {
+        "name": "duo-integration-20261030",
+        "sha": "55e4f7ade3d188a0eecc86f6d3d2ce4197ddf79a"
+      },
+      {
+        "name": "main",
+        "sha": "bc4137e4fdb1e5a1636eb31a6d479da860b1a0bc"
+      }
+    ]
+  },
+  {
+    "repo": "zqxwce/vphone-cli",
+    "branches": [
+      {
+        "name": "bugfix/cfw-fix-print",
+        "sha": "c187fcd989e127e21f29585ab9fd4151afc21395"
+      },
+      {
+        "name": "bugfix/download-log-at-create",
+        "sha": "52807370bf225c8857caac9efabca3dbbf9477d8"
+      },
+      {
+        "name": "bugfix/export-import",
+        "sha": "4e3810081aab875ae9a37da721de1a1593bd0e39"
+      },
+      {
+        "name": "bugfix/ios27-backup-encryption-escrow",
+        "sha": "ac83d371f880583cd8a4e31b90f3c1d8a54e703d"
+      },
+      {
+        "name": "bugfix/ios27-various-crashes",
+        "sha": "6b1e5470e56178d5c35d72a18c4fed32bb89fc1f"
+      },
+      {
+        "name": "bugfix/missing-sdk-req",
+        "sha": "4d32bd9ebf0b77382f06532add79cbbd75ebfff0"
+      },
+      {
+        "name": "bugfix/missingreq",
+        "sha": "03c1de9041e60bc4153e01ee486a2af3a305415a"
+      },
+      {
+        "name": "bugfix/readme_26",
+        "sha": "3cba7ce782ca811585f4e608904a7837ab00bead"
+      },
+      {
+        "name": "bugfix/2661RC-Release",
+        "sha": "8d5dc4694d5471029516bbd36801a62cfe4ebc04"
+      },
+      {
+        "name": "catalog-add-26.6.2-27.0-rc",
+        "sha": "134fc67e581a13fafdcb8943a1ad9a73be9bd2fd"
+      },
+      {
+        "name": "catalog-ios27-beta8",
+        "sha": "278a862b8cc94fc1df9d7b8e17366519d06a015e"
+      },
+      {
+        "name": "chore/resources-fork-remote",
+        "sha": "ba25c778e398a61e232305f62109b30139d1e290"
+      },
+      {
+        "name": "ci/portable-release-build",
+        "sha": "2f9424ae87606eb65c21b9a155bd2b9e4a618638"
+      },
+      {
+        "name": "ci/release-workflow",
+        "sha": "9a3e886b30651a1a7772a2418147fe8e322786e1"
+      },
+      {
+        "name": "ci-test-signing",
+        "sha": "b794051dffd78310282f221a6963fe596d653a65"
+      },
+      {
+        "name": "docs/streamline-readme",
+        "sha": "002456fd0880e8b73d0ce21e52a488324b403fda"
+      },
+      {
+        "name": "feat/firmware-pairing-prompt",
+        "sha": "b409629f587ce3405f762c50b50b7eeb9b269264"
+      },
+      {
+        "name": "feat/restore-version-note",
+        "sha": "f7eea4da9a14896976e1b04c801bf81174d0e8b5"
+      },
+      {
+        "name": "feat/vm-create-disk-size",
+        "sha": "361b414114d0caa3c01817fc6f2e1cf464647d90"
+      },
+      {
+        "name": "feat/vphone-amfidont",
+        "sha": "b1701488b28eced859c2a0938ab4b46cd1a97516"
+      },
+      {
+        "name": "feature/apple-services",
+        "sha": "914c834760f6834d02e8ec8a208cad5191841bb6"
+      },
+      {
+        "name": "feature/compression-options",
+        "sha": "3926182aca04b0632f8f83db2d6d325d01788af7"
+      },
+      {
+        "name": "feature/configure-network",
+        "sha": "905fd6d320abc02db114ca591235d85bf32bc9de"
+      },
+      {
+        "name": "feature/create-bulk",
+        "sha": "6d275849cf4665ea74f0de3d407ce0a134bd687f"
+      },
+      {
+        "name": "feature/dsc-maxslide",
+        "sha": "4f34901af2a7908783186d50b808e0bb9e18c7ce"
+      },
+      {
+        "name": "feature/frida",
+        "sha": "3991dcc2f9a7cb6fe7fd64fcba845145819f1dbf"
+      },
+      {
+        "name": "feature/frida-source-sileo",
+        "sha": "b7fe489044fefb1331cacd92cd1fc8d4648586d2"
+      },
+      {
+        "name": "feature/iOS18-support",
+        "sha": "ef2775b6e876053c93d3cabbed23d9f243fb96fc"
+      },
+      {
+        "name": "feature/ios27-support",
+        "sha": "8fe533d5c5f2814143d5d889646e1a1c52a62233"
+      },
+      {
+        "name": "feature/optional-exc-guard",
+        "sha": "e23ddf3fcec6c3ad34ee2685012c779770f4aa9a"
+      },
+      {
+        "name": "feature/preset-file",
+        "sha": "371da46066291c6d5af28b59fb51b0265257554c"
+      },
+      {
+        "name": "feature/root-popup",
+        "sha": "385d99ef3de2d0374a122bf2d1fecf24c9d66368"
+      },
+      {
+        "name": "feature/space-save",
+        "sha": "4a0380cd392b5d8e65d12a0fb748e840f0646766"
+      },
+      {
+        "name": "feature/update-tested-env",
+        "sha": "b6452f79a0794417cadf4bf5c52df9d72ec9d0d4"
+      },
+      {
+        "name": "feature/usb-support",
+        "sha": "93682f8cc68341e3ff2fc4fc28481078fa8233ea"
+      },
+      {
+        "name": "feature/vm-info-variant-udid-device",
+        "sha": "337990ddc3ec178f1f913f0f6cfa69930a730cca"
+      },
+      {
+        "name": "feature/26-6-1",
+        "sha": "a6fe6a97648302a3b34f110852d285df3d78313e"
+      },
+      {
+        "name": "feature/27b5-support",
+        "sha": "4d43d017f9f0419f36fe760e80f138115f544118"
+      },
+      {
+        "name": "feature/27beta6",
+        "sha": "459d9939f3f7ea8153ab78e78392ee398656c52c"
+      },
+      {
+        "name": "fix/amfidont-bundle-signing",
+        "sha": "58970158d720e2227cffc3482ba2be3a58444a3a"
+      },
+      {
+        "name": "fix/bundled-app-path-resolution",
+        "sha": "caa2e0da86528e746a2e6e70215641483752f4e4"
+      },
+      {
+        "name": "fix/host-hotkeys-push-mode",
+        "sha": "db19ff67aec385c2441b321210c2c2e8243588c1"
+      },
+      {
+        "name": "fix/interactive-sudo-password",
+        "sha": "d8b3ed42206ec1339e55de8886f898fe92facf2c"
+      },
+      {
+        "name": "fix/preflight-bundled-binary",
+        "sha": "36cb8bde797b707a6f896ba371ab7cfe4e19d6ef"
+      },
+      {
+        "name": "fw-catalog-json",
+        "sha": "a9de2c8f742eca832ad4f8e8b5cc52e8feadb4a2"
+      },
+      {
+        "name": "headless-boot",
+        "sha": "ebcf3ea43b995f1cae447f39b29179d060fb7be1"
+      },
+      {
+        "name": "ios27-dsc-maxslide",
+        "sha": "47daa7022c72b5e24e2392228706f7a52126bd29"
+      },
+      {
+        "name": "iphone17-3-presents-board",
+        "sha": "4420a32694421d83833a37fef3cbd6b12474dbf9"
+      },
+      {
+        "name": "main",
+        "sha": "cb23353eb61b74186bc0b345fe34e6868b733746"
+      },
+      {
+        "name": "refactor/clone-to-submodules",
+        "sha": "11654ec7f3640fec7aa69193d8e3f3745d4ff899"
+      },
+      {
+        "name": "refactor/single-tool-cli",
+        "sha": "619abc14088222cb28e8c5fee4e7ba6b39e16087"
+      },
+      {
+        "name": "resources-drop-ramdisk",
+        "sha": "f8296e8b13c5751aab9d9735164607ea44513d5e"
+      },
+      {
+        "name": "selectable-account-prompt-hooks",
+        "sha": "11106c8e6b9dcf61519af3cc6cabf8adedff14bf"
+      },
+      {
+        "name": "vm-create-bootstrap",
+        "sha": "f9cca2f47c3a2e1158cfdaca68e373b1b8dc4121"
+      },
+      {
+        "name": "vm-info-json-network",
+        "sha": "b21e55cd09911f43324ef92ba408c8f35e704cd1"
+      }
+    ]
+  }
+]

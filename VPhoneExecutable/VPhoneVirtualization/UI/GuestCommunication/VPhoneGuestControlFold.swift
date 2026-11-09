@@ -12,6 +12,9 @@ extension VPhoneGuestControl {
         guard guestCapabilities.contains("device_pose") else {
             throw ControlError.unsupportedCapability("device_pose")
         }
+        guard foldRequestsInFlight == 0 else {
+            throw ControlError.guestError("A fold or StandBy transition is already in progress.")
+        }
         var params: [String: Any] = ["position": position.rawValue]
         if let duration {
             params["duration"] = duration
@@ -44,6 +47,35 @@ extension VPhoneGuestControl {
             applied: hingeHID?.bool("applied") ?? false,
             sweepMilliseconds: sweepMilliseconds,
         )
+    }
+
+    func readStandByMode() async throws -> VPhoneStandByMode? {
+        let result = try await call("display.standby")
+        guard result.object("pose")?.bool("available") == true else { return nil }
+        return result.string("mode").flatMap(VPhoneStandByMode.init(rawValue:))
+    }
+
+    func setStandByMode(_ mode: VPhoneStandByMode) async throws -> VPhoneStandByMode {
+        guard guestCapabilities.contains("display_standby") else {
+            throw ControlError.unsupportedCapability("display_standby")
+        }
+        guard foldRequestsInFlight == 0 else {
+            throw ControlError.guestError("A fold or StandBy transition is already in progress.")
+        }
+        foldRequestsInFlight += 1
+        defer { foldRequestsInFlight -= 1 }
+        let result = try await call("display.standby", params: ["mode": mode.rawValue])
+        guard result.string("mode") == mode.rawValue,
+              result.object("pose")?.bool("available") == true else {
+            throw ControlError.protocolError("The guest did not verify the requested StandBy pose")
+        }
+        // The hinge is only one part of StandBy; keep the title-bar toggle
+        // and viewer following the actual sensor angle after this request.
+        foldSweepSeconds = 0
+        let position: VPhoneFoldPosition = mode == .off ? .closed : mode == .book ? .open : .book
+        foldPosition = position
+        foldAngle = position.angle
+        return mode
     }
 
     /// The angle the guest's last fold settled at, which the orientation poll
